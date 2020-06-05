@@ -1,0 +1,61 @@
+{
+  "groups": [
+    {
+      "category": "WorkersRights",
+      "name": "UNISON",
+      "topic": "Workers Rights",
+      "type": "Union",
+      "website": "https://www.unison.org.uk/coronavirus-rights-work/",
+      "detailsNotes": "",
+      "targetGroup": ""
+    },
+    {
+      "category": "WorkersRights",
+      "name": "Shelter",
+      "topic": "Housing",
+      "type": "Charity ",
+      "website": "https://england.shelter.org.uk/housing_advice/coronavirus",
+      "detailsNotes": "Topics include: Rent, benefits and money problems; Eviction and being asked to leave ; Help if you're homeless; Domestic abuse; Ending a tenancy and moving home; Repairs and access to your home; Mortgage payment problems",
+      "targetGroup": ""
+    },
+    {
+      "category": "WorkersRights",
+      "name": "Working families",
+      "topic": "Workers Rights",
+      "type": "Charity",
+      "website": "https://workingfamilies.org.uk/articles/coronavirus/",
+      "detailsNotes": "",
+      "targetGroup": ""
+    },
+    {
+      "category": "WorkersRights",
+      "name": "Citizens Advice ",
+      "topic": "",
+      "type": "",
+      "website": "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/",
+      "detailsNotes": "",
+      "targetGroup": ""
+    },
+    {
+      "category": "WorkersRights",
+      "name": "Citizens Advice Lewisham ",
+      "topic": "General Advice Line",
+      "type": "Charity",
+      "website": "https://citizensadvicelewisham.org.uk/",
+      "detailsNotes": "",
+      "targetGroup": ""
+    }
+  ],
+  "columns": [
+    "Organisation",
+    "Topic",
+    "Type ",
+    "Website",
+    "Details/notes",
+    "Target Group",
+    "1",
+    "2",
+    "3",
+    "..."
+  ]
+}

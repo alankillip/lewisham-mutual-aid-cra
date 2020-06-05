@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "category": "SupportLocalBusiness",
+      "name": "Lewisham Hospital",
+      "details": "Provide food, supplies, and practical and emotional support for Lewisham hospital workers",
+      "howYouCanHelp": "Volunteers to help hospital staff with their needs",
+      "links": "https://chat.whatsapp.com/EPLwfCboGgo7f3oB2VTpFp"
+    }
+  ],
+  "columns": [
+    "Name of company",
+    "Details",
+    "How you can help",
+    "Links"
+  ]
+}

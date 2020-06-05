@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import {menu} from './Routes';
+import {RouteItem} from "./models-app/Route";
 
-function App() {
+
+const page = (route: RouteItem, index: number) => {
+  const RouteComponent = route.component;
+  console.log('route.component', route.component);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Route exact={index === 0} path={route.path} key={route.path}>
+      <RouteComponent />
+    </Route>
+  );
+};
+
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <ul>
+          {menu.map((route: RouteItem) => (
+            <li key={route.path}>
+              <Link to={route.path}>{route.label}</Link>
+            </li>
+          ))}
+        </ul>
+        <hr />
+        <Switch>
+          {menu.map(page)}
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
