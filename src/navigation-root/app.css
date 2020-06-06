@@ -28,7 +28,7 @@
 .menu-item {
   padding-top: 13px;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 10px;
   height: 37px;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-align: right;
+  text-align: center;
 }
 
 .sub-menu-item {
