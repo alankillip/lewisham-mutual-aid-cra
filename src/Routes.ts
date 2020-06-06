@@ -14,7 +14,7 @@ import {
 } from './pages/resources/';
 import {RouteItem} from "./models-app/Route";
 
-const resourcesMenu = [
+export const resourcesMenu = [
   {path: '/resources/links', component: Links, label: 'LINKS'},
   {path: '/resources/community-groups', component: CommGroups, label: 'COMMUNITY GROUPS'},
   {path: '/resources/workers-rights', component: WorkersRights, label: "WORKER'S RIGHTS"},

@@ -3,7 +3,7 @@ import React from 'react';
 
 const WorkersRights = () => (
   <div>
-    Lewisham Mutual Aid Community Groups
+    Lewisham Mutual Aid Workers Rights
   </div>
 );
 

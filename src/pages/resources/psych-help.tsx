@@ -3,7 +3,7 @@ import React from 'react';
 
 const PsychHelp = () => (
   <div>
-    Lewisham Mutual Aid Community Groups
+    Lewisham Mutual Aid Psych Help
   </div>
 );
 

@@ -2,14 +2,14 @@ import * as React from "react";
 import {Switch} from "react-router";
 import {BrowserRouter as Router} from "react-router-dom";
 import './app.css';
-import {menu} from "../Routes";
+import {menu, resourcesMenu} from "../Routes";
 import {RouteItem} from "../models-app/Route";
 import MenuItem from './menu-item';
 import page from './page';
 
 const filterPages = (route: RouteItem) => route.path !== undefined;
 
-  class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <Router>
@@ -17,11 +17,11 @@ const filterPages = (route: RouteItem) => route.path !== undefined;
           <div className="top-bar">
             <div className="site-title">Lewisham Mutual Aid</div>
             <div className="menu">
-              {menu.map((route: RouteItem) => <MenuItem {...route} />)}
+              {menu.map((route: RouteItem) => <MenuItem key={route.label} route={route} />)}
             </div>
           </div>
           <Switch>
-            {menu.filter(filterPages).map(page)}
+            {menu.concat(resourcesMenu).filter(filterPages).map(page)}
           </Switch>
         </div>
       </Router>

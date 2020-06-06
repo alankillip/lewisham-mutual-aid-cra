@@ -6,7 +6,6 @@
   flex-direction: row;
   height: 50px;
   justify-content: space-between;
-  align-items: center;
   padding-right: 10px;
 }
 
@@ -18,19 +17,21 @@
 
 }
 
-.menu-item-container {
+.sub-menu {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  justify-content: flex-end;
+  width: 350px;
 }
 
 .menu-item {
   padding-top: 13px;
-  padding-bottom: 13px;
   padding-left: 10px;
   padding-right: 10px;
+  height: 37px;
   display: flex;
   flex-direction: column;
-  height: 100%;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -38,7 +39,23 @@
   user-select: none;
 }
 
+.sub-menu-item {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: black;
+  border-style: solid;
+  border-width: thin;
+  flex-direction: row;
+  justify-content: flex-end;
 
+}
 
 .menu-item-selected {
   background: #000000;
@@ -53,4 +70,7 @@
 .site-title {
   padding-left: 25px;
   cursor: default;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
