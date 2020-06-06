@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-import {RouteItem} from "../models-app/Route";
 import {useHistory} from "react-router";
+import {RouteItem} from "../models-app/Route";
+import SubMenu from './sub-menu';
 
 const MenuItem: React.FunctionComponent<Props> = (props: Props) => {
   let history = useHistory();
-  const {path} = props.route;
+  const {path, label, routes} = props.route;
   const [open, setOpen] = useState(false);
   const handleClick = () => () => {
     if (path) {
@@ -15,27 +16,17 @@ const MenuItem: React.FunctionComponent<Props> = (props: Props) => {
   };
 
   const handleMouseLeave = () => () => {
-    console.log('handleMouseLeave');
     setOpen(false);
   };
 
-  const getSubRouteComponent = (route: RouteItem) => {
-    return <MenuItem route={route} key={route.label} className={'sub-menu-item'} />;
-  };
-
-  const getSubRouteComponents = () => {
-    const {routes} = props.route;
-    return routes && open ? routes.map(getSubRouteComponent) : null;
-  };
   const {className} = props;
+  const selected = open ? 'menu-item-selected' : '';
   return (
     <div onClick={handleClick()} onMouseLeave={handleMouseLeave()} >
-      <div className={className} key={props.route.path}>
-        {props.route.label}
+      <div className={`${className} ${selected}`} key={props.route.path}>
+        {label}
       </div>
-      <div className="sub-menu">
-        {getSubRouteComponents()}
-      </div>
+      {<SubMenu routes={routes} open={open} />}
     </div>
   );
 };

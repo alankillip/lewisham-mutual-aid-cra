@@ -25,9 +25,9 @@ export const resourcesMenu = [
 
 export const menu: RouteItem[] = [
   {path: '/', component: Home, label: 'HOME'},
-  {label: 'RESOURCES', routes: resourcesMenu, component: () => null},
   {path: '/search', component: Search, label: 'SEARCH'},
   {path: '/find-a-group', component: FindAGroup, label: 'GROUPS'},
+  {label: 'RESOURCES', routes: resourcesMenu, component: () => null},
 ];
 
 
