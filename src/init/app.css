@@ -1,0 +1,56 @@
+.top-bar {
+  -webkit-box-shadow: 2px 6px 5px -1px rgba(0,0,0,0.13);
+  -moz-box-shadow: 2px 6px 5px -1px rgba(0,0,0,0.13);
+  box-shadow: 2px 6px 5px -1px rgba(0,0,0,0.13);
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  justify-content: flex-end;
+
+}
+
+.menu-item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+.menu-item-selected {
+  background: #000000;
+  color: #ffffff;
+}
+
+.menu div.menu-item:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.site-title {
+  padding-left: 25px;
+  cursor: default;
+}
