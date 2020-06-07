@@ -4,24 +4,32 @@ import SubMenu from './sub-menu';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { History, LocationState} from 'history';
 
-class MenuItem extends React.PureComponent<Props, {isOpen: boolean}> {
+class MenuItem extends React.PureComponent<Props, {isOpen: boolean, width: number, left: number}> {
 
   constructor(props: Props) {
     super(props);
     this.ref = React.createRef();
     this.state = {
-      isOpen: false
+      isOpen: false,
+      width: 0,
+      left: 0
     }
   }
 
   private ref: RefObject<HTMLDivElement>;
 
   setOpen = (isOpen: boolean) => {
-    this.setState(
-      {
-        isOpen
-      }
-    )
+    const {current} = this.ref;
+    if (current) {
+      const {left, width} = current.getBoundingClientRect();
+      this.setState(
+        {
+          isOpen,
+          width,
+          left
+        }
+      )
+    }
   };
 
   handleClick = () => {
@@ -41,14 +49,14 @@ class MenuItem extends React.PureComponent<Props, {isOpen: boolean}> {
   render() {
     const {className, route} = this.props;
     const {label, routes} = route;
-    const {isOpen} = this.state;
+    const {isOpen, width, left} = this.state;
     const selected = isOpen ? 'menu-item-selected' : '';
     return (
-      <div onClick={this.handleClick} onMouseLeave={this.handleMouseLeave} >
+      <div ref={this.ref} onClick={this.handleClick} onMouseLeave={this.handleMouseLeave} >
         <div className={`${className} ${selected}`} key={route.path}>
           {label}
         </div>
-        {isOpen && <SubMenu routes={routes} />}
+        <SubMenu routes={routes} isOpen={isOpen} parentWidth={width} parentX={left} />
       </div>
     );
   }

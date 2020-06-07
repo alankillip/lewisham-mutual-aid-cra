@@ -2,13 +2,20 @@ import React, {RefObject} from 'react';
 import {RouteItem} from "../models-app/Route";
 import MenuItem from "./menu-item";
 
-class SubMenu extends React.Component<Props> {
+class SubMenu extends React.Component<Props, {width: number}> {
+  static defaultProps = {
+      parentWidth: 0
+  };
   private ref: RefObject<HTMLDivElement>;
-  private x: number = 0;
 
   constructor(props: Props) {
     super(props);
     this.ref = React.createRef();
+    this.state = (
+      {
+        width: 0
+      }
+    )
   }
 
   getSubRouteComponent = (route: RouteItem) => {
@@ -22,24 +29,32 @@ class SubMenu extends React.Component<Props> {
 
   componentDidMount() {
     if (this.ref.current) {
-      const {left, width} = this.ref.current.getBoundingClientRect();
-      console.log('left, width ', left, width);
-      this.x = left - width + 105;
+      const {width} = this.ref.current.getBoundingClientRect();
+      this.setState(
+        {
+          width
+        }
+      )
     }
   }
 
   render() {
-    const styleObj = this.x !== 0 ? {left: this.x} : {};
+    const {isOpen, parentX, parentWidth} = this.props;
+    const {width} = this.state;
+    const styleObj = {left: parentX - width + parentWidth};
     return (
       <div style={styleObj} ref={this.ref} className="sub-menu">
-        {this.getSubRouteComponents()}
+        {isOpen && this.getSubRouteComponents()}
       </div>
     );
   }
 }
 
 export interface Props {
-  routes: RouteItem[] | undefined
+  routes: RouteItem[] | undefined,
+  isOpen: boolean;
+  parentWidth: number,
+  parentX: number,
 }
 
 export default SubMenu;

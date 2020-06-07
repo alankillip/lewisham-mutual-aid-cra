@@ -29,5 +29,3 @@ export const menu: RouteItem[] = [
   {path: '/find-a-group', component: FindAGroup, label: 'GROUPS'},
   {label: 'RESOURCES', routes: resourcesMenu, component: () => null},
 ];
-
-
