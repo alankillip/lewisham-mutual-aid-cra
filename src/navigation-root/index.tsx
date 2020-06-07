@@ -17,7 +17,7 @@ class App extends React.Component {
           <div className="top-bar">
             <div className="site-title">Lewisham Mutual Aid</div>
             <div className="menu">
-              {menu.map((route: RouteItem) => <MenuItem key={route.label} route={route} />)}
+              {menu.map((route: RouteItem) => <MenuItem key={route.label} route={route} className="menu-item" />)}
             </div>
           </div>
           <Switch>

@@ -1,43 +1,63 @@
-import React, {useState} from "react";
-import {useHistory} from "react-router";
+import React, {RefObject} from "react";
 import {RouteItem} from "../models-app/Route";
 import SubMenu from './sub-menu';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { History, LocationState} from 'history';
 
-const MenuItem: React.FunctionComponent<Props> = (props: Props) => {
-  let history = useHistory();
-  const {path, label, routes} = props.route;
-  const [open, setOpen] = useState(false);
-  const handleClick = () => () => {
+class MenuItem extends React.PureComponent<Props, {isOpen: boolean}> {
+
+  constructor(props: Props) {
+    super(props);
+    this.ref = React.createRef();
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  private ref: RefObject<HTMLDivElement>;
+
+  setOpen = (isOpen: boolean) => {
+    this.setState(
+      {
+        isOpen
+      }
+    )
+  };
+
+  handleClick = () => {
+    const {path} = this.props.route;
+    const {isOpen} = this.state;
     if (path) {
-      history.push(path);
+      this.props.history.push(path);
     } else {
-      setOpen(!open);
+      this.setOpen(!isOpen);
     }
   };
 
-  const handleMouseLeave = () => () => {
-    setOpen(false);
+  handleMouseLeave = () => {
+    this.setOpen(false);
   };
 
-  const {className} = props;
-  const selected = open ? 'menu-item-selected' : '';
-  return (
-    <div onClick={handleClick()} onMouseLeave={handleMouseLeave()} >
-      <div className={`${className} ${selected}`} key={props.route.path}>
-        {label}
+  render() {
+    const {className, route} = this.props;
+    const {label, routes} = route;
+    const {isOpen} = this.state;
+    const selected = isOpen ? 'menu-item-selected' : '';
+    return (
+      <div onClick={this.handleClick} onMouseLeave={this.handleMouseLeave} >
+        <div className={`${className} ${selected}`} key={route.path}>
+          {label}
+        </div>
+        {isOpen && <SubMenu routes={routes} />}
       </div>
-      {<SubMenu routes={routes} open={open} />}
-    </div>
-  );
+    );
+  }
 };
 
-MenuItem.defaultProps = {
-  className: 'menu-item'
-};
-
-export interface Props {
+export interface Props extends RouteComponentProps {
   route: RouteItem,
-  className?: 'menu-item' | 'sub-menu-item'
+  history: History<LocationState>,
+  className: 'menu-item' | 'sub-menu-item'
 }
 
-export default MenuItem;
+export default withRouter(MenuItem);

@@ -16,8 +16,8 @@ class SubMenu extends React.Component<Props> {
   };
 
   getSubRouteComponents = () => {
-    const {routes, open} = this.props;
-    return routes && open ? routes.map(this.getSubRouteComponent) : null;
+    const {routes} = this.props;
+    return routes ? routes.map(this.getSubRouteComponent) : null;
   };
 
   componentDidMount() {
@@ -39,8 +39,7 @@ class SubMenu extends React.Component<Props> {
 }
 
 export interface Props {
-  routes: RouteItem[] | undefined,
-  open: boolean
+  routes: RouteItem[] | undefined
 }
 
 export default SubMenu;
