@@ -16,7 +16,7 @@
     padding-left: 15px;
     border: solid #d6f1f4 thin;
     margin-bottom: 15px;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .comm-group-title {
@@ -33,4 +33,9 @@
 
 .feature-name {
     color: #318492;
+}
+
+.whatsapp {
+    position: relative;
+    top: 5px;
 }

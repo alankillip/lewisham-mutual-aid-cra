@@ -1,6 +1,17 @@
 import {CommGroup} from '../../../models-content/CommGroup';
 import './comm-groups.css'
 import React from "react";
+import whatsappLogo from '../../../images/whatsapp.svg';
+
+const whatsApp = (title: string, content: string) => (
+  <div key={`${title} ${content}`}>
+    <div className="feature-name">{`${title} : `}<a className="comm-group-content" title="whatsapp group" href={content}target="_blank"><img className="whatsapp" width="20px"
+                                                                                                       alt="whatsapp"
+                                                                                                       src={whatsappLogo}/></a>
+    </div>
+
+  </div>
+);
 
 const link = (title: string, content: string) => (
   <div key={`${title} ${content}`}>
@@ -26,6 +37,15 @@ const getFeatures = (titles: string[], commGroup: CommGroup) => {
     switch (keys[index]) {
       case 'link':
         return link(title, content);
+
+      case 'contactFromOrg':
+        if (content.indexOf('https://chat.whatsapp.com/') === 0) {
+          return whatsApp(title, content);
+        }
+        if (content.indexOf('https://') === 0) {
+          return link(title, content);
+        }
+
     }
     return feature(title, content);
   };
