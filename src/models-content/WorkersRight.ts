@@ -1,4 +1,4 @@
-export interface WorkersRights {
+export interface WorkersRight {
      name: string;
      topic: string;
      type: string;

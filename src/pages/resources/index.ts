@@ -1,4 +1,4 @@
-import CommGroups from './comm-groups';
+import CommGroups from './comm-groups/comm-groups';
 import Links from './links';
 import Meetings from './meetings';
 import PsychHelp from './psych-help';

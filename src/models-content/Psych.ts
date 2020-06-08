@@ -1,4 +1,4 @@
-export interface PsychHelp {
+export interface Psych {
      type: string;
      name: string;
      phone: string;

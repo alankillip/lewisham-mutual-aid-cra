@@ -1,0 +1,36 @@
+.comm-groups {
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+
+.title {
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #318492;
+}
+
+.comm-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    border: solid #d6f1f4 thin;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+.comm-group-title {
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #318492;
+}
+
+.comm-group-content {
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+}
+
+.feature-name {
+    color: #318492;
+}

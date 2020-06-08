@@ -1,4 +1,4 @@
-export interface Meetings {
+export interface Meeting {
      date: string;
      agenda: string;
      minutes: string;

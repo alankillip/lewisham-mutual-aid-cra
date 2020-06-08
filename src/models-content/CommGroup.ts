@@ -1,4 +1,4 @@
-export interface CommGroups {
+export interface CommGroup {
      name: string;
      basedIn: string;
      whatDoYouDo: string;

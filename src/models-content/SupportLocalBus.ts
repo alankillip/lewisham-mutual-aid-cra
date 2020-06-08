@@ -1,4 +1,4 @@
-export interface SupportLocalBusiness {
+export interface SupportLocalBus {
      name: string;
      details: string;
      howYouCanHelp: string;
