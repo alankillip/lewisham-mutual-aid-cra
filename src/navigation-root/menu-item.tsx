@@ -16,6 +16,14 @@ class MenuItem extends React.PureComponent<Props, {isOpen: boolean, width: numbe
     }
   }
 
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
   private ref: RefObject<HTMLDivElement>;
 
   setOpen = (isOpen: boolean) => {
@@ -42,8 +50,10 @@ class MenuItem extends React.PureComponent<Props, {isOpen: boolean, width: numbe
     }
   };
 
-  handleMouseLeave = () => {
-    this.setOpen(false);
+  handleClickOutside = (mouseEvent: MouseEvent) => {
+    if (this.ref.current && !this.ref.current.contains(mouseEvent.target as Node)) {
+      this.setOpen(false)
+    }
   };
 
   render() {
@@ -52,7 +62,7 @@ class MenuItem extends React.PureComponent<Props, {isOpen: boolean, width: numbe
     const {isOpen, width, left} = this.state;
     const selected = isOpen ? 'menu-item-selected' : '';
     return (
-      <div ref={this.ref} onClick={this.handleClick} onMouseLeave={this.handleMouseLeave} >
+      <div ref={this.ref} onClick={this.handleClick} >
         <div className={`${className} ${selected}`} key={route.path}>
           {label}
         </div>
