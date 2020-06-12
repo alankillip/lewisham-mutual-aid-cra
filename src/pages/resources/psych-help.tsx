@@ -1,10 +1,18 @@
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { State } from '../../state';
+import PsychHelpComponent from '../../components/psych-help-component';
+import './comm-groups.css';
 
-import React from 'react';
-
-const PsychHelp = () => (
-  <div>
-    Lewisham Mutual Aid Psych Help
-  </div>
-);
+const PsychHelp = () => {
+  const psychHelpSelector = (state: State) => state.resources.psychHelp;
+  const psychs = useSelector(psychHelpSelector);
+  const {groups, columns} = psychs;
+  return (
+    <div className="comm-groups">
+      <div className="title">Advice & Support for Psychological Difficulties - compiled by Simon Docking</div>
+      <PsychHelpComponent psychs={groups} titles={columns} />
+    </div>
+  )};
 
 export default PsychHelp;
