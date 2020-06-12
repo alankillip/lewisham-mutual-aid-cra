@@ -1,9 +1,7 @@
 import Home from './home';
-import FindAGroup from './find-a-group';
-import Search from './search';
+import Search from './resources/search';
 
 export {
   Home,
-  FindAGroup,
   Search,
 };

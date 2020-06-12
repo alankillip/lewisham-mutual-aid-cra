@@ -1,7 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { State } from '../../../state';
-import CommGroupComponent from './comm-group-component';
+import { State } from '../../state';
+import CommGroupComponent from '../../components/comm-group-component';
+import './comm-groups.css';
 
 const CommGroups = () => {
   const commGroupsSelector = (state: State) => state.resources.commGroups;

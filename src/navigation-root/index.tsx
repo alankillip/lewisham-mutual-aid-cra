@@ -2,7 +2,7 @@ import * as React from "react";
 import {Switch} from "react-router";
 import {BrowserRouter as Router} from "react-router-dom";
 import './app.css';
-import {menu, resourcesMenu} from "../Routes";
+import {menu, resourcesMenu, groupsMenu} from "../Routes";
 import {RouteItem} from "../models-app/Route";
 import MenuItem from './menu-item';
 import page from './page';
@@ -21,7 +21,7 @@ class App extends React.Component {
             </div>
           </div>
           <Switch>
-            {menu.concat(resourcesMenu).filter(filterPages).map(page)}
+            {menu.concat(resourcesMenu).concat(groupsMenu).filter(filterPages).map(page)}
           </Switch>
         </div>
       </Router>

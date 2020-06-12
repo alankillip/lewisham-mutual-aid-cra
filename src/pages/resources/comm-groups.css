@@ -1,0 +1,11 @@
+.comm-groups {
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+
+.title {
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #318492;
+}
