@@ -1,181 +1,181 @@
 [
   {
     "category": "Links",
-    "content": "Sydenham Handbook Template for volunteers (edited for Lewisham)",
+    "name": "Sydenham Handbook Template for volunteers (edited for Lewisham)",
     "link": "https://docs.google.com/document/d/1aIf28vipA6BwMY3pDqHbYg6LFgF7rAuWhYqKdFPtyyM/edit?usp=sharing",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Flyer Template #1",
+    "name": "Flyer Template #1",
     "link": "https://docs.google.com/document/d/1gaDWPGoxIAWot9RWLvg1HOuOQlov6gVzsJ7wSyI5bDw/edit?usp=sharing",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "How to run a big Zoom meeting",
+    "name": "How to run a big Zoom meeting",
     "link": "https://docs.google.com/document/d/e/2PACX-1vTIXqAZR9k5admgKyJbA-tYh0Z5Fka9std73x3FbxH9JKC5TQE3XVR0HimAW8_ZE5NURBOPs6QT-_gn/pub?fbclid=IwAR3Pr0wszpykNH7pEewzFajlnRJrcn5B2UeVxTaJUtXbnQ-Yd6VXnt2oNG0",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "List of UK-wide mutual aid groups",
+    "name": "List of UK-wide mutual aid groups",
     "link": "https://freedomnews.org.uk/covid-19-uk-mutual-aid-groups-a-list/",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "List and map of UK-wide mutual aid groups",
+    "name": "List and map of UK-wide mutual aid groups",
     "link": "https://covidmutualaid.org/local-groups/",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Our Facebook group",
+    "name": "Our Facebook group",
     "link": "https://www.facebook.com/groups/906156979855211/",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "QueerCare guidance on COVID19",
+    "name": "QueerCare guidance on COVID19",
     "link": "https://queercare.network/our-work/resources/covid-19/",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Royal Mail stance on COVID19",
+    "name": "Royal Mail stance on COVID19",
     "link": "https://www.royalmail.com/coronavirus?fbclid=IwAR3NO1sC5MRL_j6H8THbyIAptTzorkHl6cYPDlmMi6FmG-faI9cozQfmFdo",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Leafleting protocol",
+    "name": "Leafleting protocol",
     "link": "https://docs.google.com/document/d/1tWWky3DI_4o01idxJqcP_GIUt4UxfTfrU02w67p41Hw/edit?usp=sharing",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "How to run online meetings, classes, and events",
+    "name": "How to run online meetings, classes, and events",
     "link": "https://docs.google.com/document/d/1NyrEU7n6IUl5rgGiflx_dK8CrdoB2bwyyl9XG-H7iw8/preview?fbclid=IwAR21PQh0YN6vqE9mdkadUOqszpSfJqmZw9jxU1tuMBVaJ836CkfoD0YG20M",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Worried about your job, whether you're going to afford rent/food, or how your boss is handling the virus?",
+    "name": "Worried about your job, whether you're going to afford rent/food, or how your boss is handling the virus?",
     "link": "https://www.tuc.org.uk/resource/covid-19-coronavirus-guidance-unions?fbclid=IwAR0PDGwG-vkmeikfDPfdAv0XHgIXXYNqT0jrBDFwYg7yUEgGfF9maPcg824",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Advice for freelancers affected by COVID19",
+    "name": "Advice for freelancers affected by COVID19",
     "link": "https://docs.google.com/presentation/d/1tuRzN9zNv8rmKM8y5J278AAAQTuxILIyzOAKRtgrh_E/edit?usp=sharing",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Please report any police interaction with Lewisham mutual aid volunteers here",
+    "name": "Please report any police interaction with Lewisham mutual aid volunteers here",
     "link": "http://lewishamlockdown.wordpress.com/submit/",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Hackney resources gallery",
+    "name": "Hackney resources gallery",
     "link": "https://airtable.com/shrDtrVJmWmRcgkgE/tblQyv9WahSteQAHs?blocks=hide",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Mutual aid WhatsApp group chat tool",
+    "name": "Mutual aid WhatsApp group chat tool",
     "link": "https://docs.google.com/document/u/1/d/1w7tm6z7OEDIMI7-Cqtp-lE6VzoDe5wq0kFyfyaleAis/edit?usp=drive_web&ouid=114161509568220720904",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Guide for supporting migrants during coronavirus ",
+    "name": "Guide for supporting migrants during coronavirus ",
     "link": "https://docs.google.com/document/d/11cKMCy08ebN-lJQsP1jvsTcSfwC6YeE8FYrmAZCoZ1w/edit",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Safe delivery guidelines for volunteers",
+    "name": "Safe delivery guidelines for volunteers",
     "link": "https://files.slack.com/files-pri/T010G764H7W-F010XJBDBGD/deliveries_directions.jpg",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Risk assessment for leafletting and delivery",
+    "name": "Risk assessment for leafletting and delivery",
     "link": "https://docs.google.com/spreadsheets/d/1xSGQrkyehXHHtSMR4_x-Dt8egGuw0EIXEMtRiQWllyI/edit?usp=sharing",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Lewisham wellbeing map",
+    "name": "Lewisham wellbeing map",
     "link": "https://www.google.com/maps/d/u/0/viewer?mid=13jU2zsGolUtY5-dAhCk2Y44Np3U&ll=51.45044221345211%2C-0.006353766277015893&z=13",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Prescription pick-up protocol",
+    "name": "Prescription pick-up protocol",
     "link": "https://drive.google.com/file/d/1DE2fR_jbhSpS_-2n_79AnNhUXosw4ajV/view?usp=sharing",
     "type": "general"
   },
   {
     "category": "Links",
-    "content": "Charity links:",
+    "name": "Charity links:",
     "link": "",
     "type": ""
   },
   {
     "category": "Links",
-    "content": "Age UK Lewisham and Southwark",
+    "name": "Age UK Lewisham and Southwark",
     "link": "https://www.ageuk.org.uk/lewishamandsouthwark/",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "Asthma UK Coronavirus advice",
+    "name": "Asthma UK Coronavirus advice",
     "link": "https://www.asthma.org.uk/advice/triggers/coronavirus-covid-19/",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "British Heart Foundation Coronavirus advice",
+    "name": "British Heart Foundation Coronavirus advice",
     "link": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/news/coronavirus-and-your-health",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "Diabetes UK Coronavirus advice",
+    "name": "Diabetes UK Coronavirus advice",
     "link": "https://www.diabetes.org.uk/about_us/news/coronavirus",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "Independent Age Coronavirus services for older people",
+    "name": "Independent Age Coronavirus services for older people",
     "link": "https://www.independentage.org/",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "Lewisham Food Bank",
+    "name": "Lewisham Food Bank",
     "link": "https://lewisham.foodbank.org.uk/",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "Mind charity",
+    "name": "Mind charity",
     "link": "https://www.mind.org.uk/",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "Scope charity",
+    "name": "Scope charity",
     "link": "https://www.scope.org.uk/",
     "type": "charity"
   },
   {
     "category": "Links",
-    "content": "The Silver Line -helpline for older people",
+    "name": "The Silver Line -helpline for older people",
     "link": "https://www.thesilverline.org.uk/",
     "type": "charity"
   }

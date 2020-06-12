@@ -1,10 +1,13 @@
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { State } from '../../state';
+import LinkComponent from '../../components/link-component';
 
-import React from 'react';
-
-const Links = () => (
-  <div>
-    Lewisham Mutual Aid Links
-  </div>
-);
+const Links = () => {
+  const linksSelector = (state: State) => state.resources.links;
+  const links = useSelector(linksSelector);
+  return (
+    <LinkComponent links={links} />
+  )};
 
 export default Links;

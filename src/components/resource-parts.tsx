@@ -3,14 +3,14 @@ import './resource-parts.css';
 import './content-card.css';
 import whatsappLogo from '../images/whatsapp.svg';
 
-export const Link = (title: string, content: string) => (
+export const ExternalLink = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
     <a className="content-card-content" href={content}>{content}</a>
   </div>
 );
 
-export const Feature = (title: string, content: string) => (
+export const Feature = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
     <div className="content-card-content">{content}</div>
