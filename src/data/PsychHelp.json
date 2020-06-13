@@ -969,5 +969,5 @@
       "link": "www.thewellcentre.org/"
     }
   ],
-  "columns": []
+  "columns": ["Support For", "Name", "Number", "Description", "Link"]
 }
