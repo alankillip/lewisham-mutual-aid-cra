@@ -1,9 +1,17 @@
-import {CommGroup} from './CommGroup';
-import {Link} from './Link';
-import {Meeting} from './Meeting';
-import {Psych} from './Psych';
-import {SupportLocalBus} from './SupportLocalBus';
-import {WorkersRight} from './WorkersRight';
+import {CommGroup, CommGroupKeys} from './CommGroup';
+import {Link, LinkKeys} from './Link';
+import {Meeting, MeetingKeys} from './Meeting';
+import {Psych, PsychKeys} from './Psych';
+import {SupportLocalBus, SupportLocalBusKeys} from './SupportLocalBus';
+import {WorkersRight, WorkersRightKeys} from './WorkersRight';
+
+export type ContentKeys =
+  & CommGroupKeys
+  & LinkKeys
+  & MeetingKeys
+  & PsychKeys
+  & SupportLocalBusKeys
+  & WorkersRightKeys;
 
 export type Content =
   | CommGroup
@@ -12,3 +20,4 @@ export type Content =
   | Psych
   | SupportLocalBus
   | WorkersRight;
+
