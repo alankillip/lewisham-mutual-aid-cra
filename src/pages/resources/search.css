@@ -13,4 +13,8 @@ input {
     border: 2px #318492 solid;
     font-size: 20px;
 }
+.results-tally {
+    padding: 10px 0px;
+    font-size: 20px;
+}
 
