@@ -8,14 +8,14 @@ const LinkComponent = (props: LinkComponentProps) => {
   const charityLinks = links.filter(({type}: Link) => type === 'charity');
   return (
     <div>
-      <div className="title">General Links:</div>
+      {links.length > 0 && <div className="title">General Links:</div>}
       {generalLinks.map(
       (link: Link, index: number) => (
         <div key={index} className="content-card">
           {<a className="content-card-content" href={link.link}>{link.name}</a> }
         </div>
       ))}
-      <div className="title">General Links:</div>
+      {links.length > 0 && <div className="title">Charity Links:</div>}
       {charityLinks.map(
         (link: Link, index: number) => (
           <div key={index} className="content-card">

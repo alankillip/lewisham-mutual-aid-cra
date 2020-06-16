@@ -5,6 +5,15 @@ import {Psych, PsychKeys} from './Psych';
 import {SupportLocalBus, SupportLocalBusKeys} from './SupportLocalBus';
 import {WorkersRight, WorkersRightKeys} from './WorkersRight';
 
+export type CategoryType =
+| 'CommGroups'
+| 'Links'
+| 'Meetings'
+| 'PsychHelp'
+| 'category'
+| 'SupportLocalBusiness'
+| 'WorkersRights';
+
 export type ContentKeys =
   & CommGroupKeys
   & LinkKeys

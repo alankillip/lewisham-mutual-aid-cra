@@ -1,0 +1,16 @@
+.search-box {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    font-size: 20px;
+    align-items: center;
+
+}
+input {
+    height: 30px;
+    margin: 20px;
+    padding: 5px;
+    border: 2px #318492 solid;
+    font-size: 20px;
+}
+

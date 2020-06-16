@@ -22,7 +22,7 @@ const searchResourceReducer = (searchTerm: string, caseSensitive: boolean, field
   return results
 };
 
-export const searchResources = (searchTerm: string, resources: Content[], caseSensitive: boolean, fieldsToSearch: ContentKeys[] | null = null) => {
+export const searchResources = (searchTerm: string, resources: Content[], caseSensitive: boolean, fieldsToSearch: ContentKeys[] | null = null): Content[] => {
   const searchFunction = searchResourceReducer(searchTerm, caseSensitive, fieldsToSearch);
   return resources.reduce(searchFunction, [])
 };
