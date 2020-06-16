@@ -6,7 +6,7 @@ import whatsappLogo from '../images/whatsapp.svg';
 export const ExternalLink = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
-    <a className="content-card-content" href={content}>{content}</a>
+    <a className="content-card-content" target="_blank" rel="noopener noreferrer" href={content}>{content}</a>
   </div>
 );
 

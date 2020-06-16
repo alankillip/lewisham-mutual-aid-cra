@@ -12,14 +12,14 @@ const LinkComponent = (props: LinkComponentProps) => {
       {generalLinks.map(
       (link: Link, index: number) => (
         <div key={index} className="content-card">
-          {<a className="content-card-content" href={link.link}>{link.name}</a> }
+          {<a className="content-card-content" target="_blank" rel="noopener noreferrer"  href={link.link}>{link.name}</a> }
         </div>
       ))}
       {links.length > 0 && <div className="title">Charity Links:</div>}
       {charityLinks.map(
         (link: Link, index: number) => (
           <div key={index} className="content-card">
-            {<a className="content-card-content" href={link.link}>{link.name}</a> }
+            {<a className="content-card-content" target="_blank" rel="noopener noreferrer"  href={link.link}>{link.name}</a> }
           </div>
         ))}
     </div>)
