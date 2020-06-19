@@ -2,18 +2,19 @@ import React from "react";
 import './resource-parts.css';
 import './content-card.css';
 import whatsappLogo from '../images/whatsapp.svg';
+import TextWithSearchHilite from "./text-with-search-hilite";
 
 export const ExternalLink = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
-    <a className="content-card-content" target="_blank" rel="noopener noreferrer" href={content}>{content}</a>
+    <a className="content-card-content" target="_blank" rel="noopener noreferrer" href={content}><TextWithSearchHilite text={content} /></a>
   </div>
 );
 
 export const Feature = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
-    <div className="content-card-content">{content}</div>
+    <div className="content-card-content"><TextWithSearchHilite text={content} /></div>
   </div>
 );
 

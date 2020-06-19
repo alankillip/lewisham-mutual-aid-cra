@@ -12,7 +12,11 @@ const searchReducer = (searchTerm: string) => (result: boolean, text: string): b
 
 const searchResourceReducer = (searchTerm: string, caseSensitive: boolean, fieldsToSearch: ContentKeys[] | null) => (results: Content[], resource: Content) => {
   // Search all fields by default
-  const fields: ContentKeys[] = fieldsToSearch ? fieldsToSearch : Object.keys(resource) as ContentKeys[];
+  let fields: ContentKeys[] = fieldsToSearch ? fieldsToSearch : Object.keys(resource) as ContentKeys[];
+  if (resource.category === 'Links') {
+    // @ts-ignore
+    fields = ['name', 'type'];
+  }
   const searchReducerFunction = caseSensitive ? searchReducer(searchTerm) : searchReducer(searchTerm.toLowerCase());
   const fieldsMapper = (field: ContentKeys) => caseSensitive ? resource[field] : resource[field].toLowerCase();
   const values: string[] = fields.map(fieldsMapper);

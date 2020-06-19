@@ -1,6 +1,7 @@
 import React from "react"
 import {Psych} from '../models-content/Psych'
 import {getFeatures} from './utils'
+import TextWithSearchHilite from './text-with-search-hilite';
 import './content-card.css'
 
 const PsychHelpComponent = (props: PsychProps) => {
@@ -8,14 +9,12 @@ const PsychHelpComponent = (props: PsychProps) => {
   return (
     <div>
       {psychs.map(
-        (psych: Psych, index: number) => (
-          <div key={index} className="content-card">
-            <div className="content-card-title">
-              <strong>{psych.name}</strong>
-            </div>
-            {getFeatures(titles, psych)}
+        (psych: Psych, index: number) => <div key={index} className="content-card">
+          <div className="content-card-title">
+            <strong><TextWithSearchHilite text={psych.name} /></strong>
           </div>
-      ))}
+          {getFeatures(titles, psych)}
+        </div>)}
     </div>)
 };
 

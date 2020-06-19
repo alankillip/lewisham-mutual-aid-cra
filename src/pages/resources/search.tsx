@@ -15,6 +15,8 @@ import {Meeting} from "../../models-content/Meeting";
 import {Psych} from "../../models-content/Psych";
 import {SupportLocalBus} from "../../models-content/SupportLocalBus";
 import {WorkersRight} from "../../models-content/WorkersRight";
+import {useDispatch} from "react-redux";
+import {searchTermAction} from '../../actions';
 import './resource-page.css'
 import './search.css'
 
@@ -25,16 +27,19 @@ const allResourcesSelector = (state: State): Content[] => {
 };
 
 const Search = () => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<Content[]>([]);
   const allResources = useSelector(allResourcesSelector);
   const resources = useSelector((state: State) => state.resources);
+  const dispatch = useDispatch();
+
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
     const searchTerm: string = e.currentTarget.value;
-    setSearchTerm(searchTerm);
-    const results = searchTerm.length > 2 ? searchResources(searchTerm, allResources, false) : [];
+    let results: Content[]  = [];
+    if (searchTerm.length > 2) {
+      dispatch(searchTermAction(searchTerm));
+      results = searchResources(searchTerm, allResources, false);
+    }
     setSearchResults(results);
-    console.log('searchTerm', searchTerm);
   };
 
   const filterResults = (category: CategoryType) => (content: Content) => content.category === category;

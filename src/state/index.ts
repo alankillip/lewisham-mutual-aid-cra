@@ -37,9 +37,11 @@ interface Resources {
 
 export interface State {
   resources: Resources;
+  searchTerm: string;
 }
 
 export const initialState: State = {
+  searchTerm: '',
   resources: {
     commGroups,
     links,

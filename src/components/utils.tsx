@@ -16,16 +16,16 @@ export const getFeatures = (titles: string[], content: Content) => {
     const title = titles[index - 1];
     switch (keys[index]) {
       case 'link':
-        return <ExternalLink title={title} content={content} />;
+        return <ExternalLink key={index} title={title} content={content} />;
       case 'contactFromOrg':
         if (content.indexOf('https://chat.whatsapp.com/') === 0) {
-          return <WhatsAppLink title={title} content={content} />;
+          return <WhatsAppLink key={index} title={title} content={content} />;
         }
         if (content.indexOf('https://') === 0) {
-          return <ExternalLink title={title} content={content} />;
+          return <ExternalLink key={index} title={title} content={content} />;
         }
     }
-    return <Feature title={title} content={content} />;
+    return <Feature key={index} title={title} content={content} />;
   };
   return Object.values(content).map(getFeature);
 };
