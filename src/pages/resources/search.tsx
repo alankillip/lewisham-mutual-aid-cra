@@ -42,13 +42,13 @@ const Search = () => {
     setSearchResults(results);
   };
 
-  const filterResults = (category: CategoryType) => (content: Content) => content.category === category;
-  const commGroupResults = searchResults.filter(filterResults('CommGroups')) as CommGroup[];
-  const linkResults = searchResults.filter(filterResults('Links')) as Link[];
-  const meetingsResults = searchResults.filter(filterResults('Meetings')) as Meeting[];
-  const psychResults = searchResults.filter(filterResults('PsychHelp')) as Psych[];
-  const supportLocalBusinessesResults = searchResults.filter(filterResults('SupportLocalBusiness')) as SupportLocalBus[];
-  const workersRightsResults = searchResults.filter(filterResults('WorkersRights')) as WorkersRight[];
+  const filterResults = (category: CategoryType) => searchResults.filter((content: Content) => content.category === category);
+  const commGroupResults = filterResults('CommGroups') as CommGroup[];
+  const linkResults = filterResults('Links') as Link[];
+  const meetingsResults = filterResults('Meetings') as Meeting[];
+  const psychResults = filterResults('PsychHelp') as Psych[];
+  const supportLocalBusinessesResults = filterResults('SupportLocalBusiness') as SupportLocalBus[];
+  const workersRightsResults = filterResults('WorkersRights') as WorkersRight[];
   return (
     <div className="resource-page">
       <div className="search-box">

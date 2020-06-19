@@ -25,8 +25,10 @@ export const groupsMenu = [
   {path: '/find-a-group/search-globally', component: GlobalGroups, label: 'SEARCH GLOBALLY'},
 ];
 
+export const RESOURCE_MENU_PATH = '/resources/search-resources';
+
 export const resourcesMenu = [
-  {path: '/resources/search-resources', component: Search, label: 'SEARCH RESOURCES'},
+  {path: RESOURCE_MENU_PATH, component: Search, label: 'SEARCH RESOURCES'},
   {path: '/resources/links', component: Links, label: 'LINKS'},
   {path: '/resources/community-groups', component: CommGroups, label: 'COMMUNITY GROUPS'},
   {path: '/resources/workers-rights', component: WorkersRights, label: "WORKER'S RIGHTS"},

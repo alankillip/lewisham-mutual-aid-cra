@@ -5,7 +5,7 @@ import React from "react";
 const page = (route: RouteItem, index: number) => {
   const RouteComponent = route.component;
   return (
-    <Route exact={index === 0} path={route.path} key={route.path}>
+    <Route onChange={() => console.log('ok')} exact={index === 0} path={route.path} key={route.path}>
       <RouteComponent/>
     </Route>
   );
