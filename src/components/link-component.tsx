@@ -1,6 +1,7 @@
 import React from "react"
 import {Link} from '../models-content/Link'
 import './content-card.css'
+import {ExternalLink} from './resource-parts';
 
 const LinkComponent = (props: LinkComponentProps) => {
   const {links} = props;
@@ -12,14 +13,14 @@ const LinkComponent = (props: LinkComponentProps) => {
       {generalLinks.map(
       (link: Link, index: number) => (
         <div key={index} className="content-card">
-          {<a className="content-card-content" target="_blank" rel="noopener noreferrer"  href={link.link}>{link.name}</a> }
+          <ExternalLink url={link.link} text={link.name} />
         </div>
       ))}
       {links.length > 0 && <div className="title">Charity Links:</div>}
       {charityLinks.map(
         (link: Link, index: number) => (
           <div key={index} className="content-card">
-            {<a className="content-card-content" target="_blank" rel="noopener noreferrer"  href={link.link}>{link.name}</a> }
+            <ExternalLink url={link.link} text={link.name} />
           </div>
         ))}
     </div>)

@@ -3,18 +3,23 @@ import './resource-parts.css';
 import './content-card.css';
 import whatsappLogo from '../images/whatsapp.svg';
 import TextWithSearchHilite from "./text-with-search-hilite";
+import {checkProtocolPrefix} from "./utils";
 
-export const ExternalLink = ({title, content}: ResourceProps) => (
+export const ExternalLink = (props: { url: string, text: string }) => (
+  <a target="_blank" rel="noopener noreferrer"
+     href={checkProtocolPrefix(props.url)}><TextWithSearchHilite text={props.text}/></a>);
+
+export const ExternalLinkWrapper = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
-    <a className="content-card-content" target="_blank" rel="noopener noreferrer" href={content}><TextWithSearchHilite text={content} /></a>
+    <ExternalLink url={content} text={content} />
   </div>
 );
 
 export const Feature = ({title, content}: ResourceProps) => (
   <div key={`${title} ${content}`}>
     <div className="feature-name">{`${title} : `}</div>
-    <div className="content-card-content"><TextWithSearchHilite text={content} /></div>
+    <div className="content-card-content"><TextWithSearchHilite text={content}/></div>
   </div>
 );
 
@@ -25,7 +30,7 @@ export const WhatsAppLink = ({title, content}: ResourceProps) => (
       <a className="content-card-content"
          title="whatsapp group"
          rel="noopener noreferrer"
-         href={content} target="_blank">
+         href={checkProtocolPrefix(content)} target="_blank">
         <img
           className="whatsapp"
           width="20px"

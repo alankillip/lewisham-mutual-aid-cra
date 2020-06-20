@@ -1,7 +1,7 @@
 import React from "react"
 import {Content} from "../models-content/Content"
 import {
-  ExternalLink,
+  ExternalLinkWrapper,
   WhatsAppLink,
   Feature,
 } from './resource-parts'
@@ -16,16 +16,26 @@ export const getFeatures = (titles: string[], content: Content) => {
     const title = titles[index - 1];
     switch (keys[index]) {
       case 'link':
-        return <ExternalLink key={index} title={title} content={content} />;
+        return <ExternalLinkWrapper key={index} title={title} content={content}/>;
       case 'contactFromOrg':
         if (content.indexOf('https://chat.whatsapp.com/') === 0) {
-          return <WhatsAppLink key={index} title={title} content={content} />;
+          return <WhatsAppLink key={index} title={title} content={content}/>;
         }
         if (content.indexOf('https://') === 0) {
-          return <ExternalLink key={index} title={title} content={content} />;
+          return <ExternalLinkWrapper key={index} title={title} content={content}/>;
         }
     }
-    return <Feature key={index} title={title} content={content} />;
+    return <Feature key={index} title={title} content={content}/>;
   };
   return Object.values(content).map(getFeature);
+};
+
+export const checkProtocolPrefix = (url: string) => {
+  const regex: RegExp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/, 'g');
+  const result = regex.test(url);
+  console.log('result', result, url);
+  if (!result) {
+    return `//${url}`;
+  }
+  return url;
 };
