@@ -32,8 +32,7 @@ export const getFeatures = (titles: string[], content: Content) => {
 
 export const checkProtocolPrefix = (url: string) => {
   const result = url.indexOf('http://') === 0 || url.indexOf('https://') === 0;
-  console.log(result, url);
-  if (!result) {
+  if (!result && window.location.hostname === 'localhost') {
     return `//${url}`;
   }
   return url;
