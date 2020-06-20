@@ -112,7 +112,7 @@
       "category": "Meetings",
       "date": "01.06.20",
       "agenda": "https://docs.google.com/document/d/1XoyJGqCa0wUxz0oGoZFtCVhezjqr_A_TP6xienPxoXQ/edit",
-      "minutes": "",
+      "minutes": "https://docs.google.com/document/d/1XoyJGqCa0wUxz0oGoZFtCVhezjqr_A_TP6xienPxoXQ/edit",
       "linkToJoin": "https://us02web.zoom.us/j/89068489349",
       "chair": "AJ",
       "summary": ""
@@ -120,8 +120,8 @@
     {
       "category": "Meetings",
       "date": "08.06.20",
-      "agenda": "",
-      "minutes": "",
+      "agenda": "https://docs.google.com/document/d/17laliUqAaNyEvV5wIbfIQDZLZUe18Wv_1ty0dkFt04U/edit#",
+      "minutes": "https://docs.google.com/document/d/1UEvZWIUGZjbT3WGlloaZEyDRVpgcfgqYqDsL5G0lPBA/edit#",
       "linkToJoin": "https://us02web.zoom.us/j/81246389334",
       "chair": "Alexandra ",
       "summary": ""
@@ -129,19 +129,19 @@
     {
       "category": "Meetings",
       "date": "12.06.20",
-      "agenda": "Discussion re future of Lewisham Mutual Aid (improvised agenda)",
-      "minutes": "",
-      "linkToJoin": "",
-      "chair": "",
+      "agenda": "Discussion re future of Lewisham Mutual Aid (improvised agenda);\nhttps://docs.google.com/document/d/1RExpq4dmldL6sAwEl9h1_sCaHppWz1CIRW0eOHVoRQE/edit",
+      "minutes": "https://docs.google.com/document/d/1F1x_uERX4okmYaV4_9AbIa7PftZaIvrcCpFsDZXicYI/edit#",
+      "linkToJoin": "https://us02web.zoom.us/j/86752363819",
+      "chair": "Multiple people ",
       "summary": ""
     },
     {
       "category": "Meetings",
       "date": "15.06.20",
-      "agenda": "",
+      "agenda": "https://docs.google.com/document/d/18sxZ_h-8orMyPjy4yhApxA6rQw37auj_9DT87NjCEKI/edit#",
       "minutes": "",
       "linkToJoin": "https://us02web.zoom.us/j/81448780257",
-      "chair": "Laura ",
+      "chair": "Simon",
       "summary": ""
     },
     {
@@ -150,7 +150,7 @@
       "agenda": "",
       "minutes": "",
       "linkToJoin": "https://us02web.zoom.us/j/86533414778",
-      "chair": "",
+      "chair": "Laura ",
       "summary": ""
     },
     {

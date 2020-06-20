@@ -14,7 +14,7 @@
       "name": "Anxiety UK",
       "phone": "03444 775 774 / Text Service 07537 416 905",
       "desc": "Information and support for people with anxiety disorders including 1:1 therapy info.",
-      "link": "www.anxietyuk.org.uk"
+      "link": "https://www.anxietyuk.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -22,7 +22,7 @@
       "name": "Benzo Buddies",
       "phone": "",
       "desc": "Benzodiazepine mutual support forum and information for those withdrawing and recovering from benzodiazepine use.",
-      "link": "www.benzobuddies.org"
+      "link": "http://www.benzobuddies.org/"
     },
     {
       "category": "PsychHelp",
@@ -30,7 +30,7 @@
       "name": "No More Panic",
       "phone": "",
       "desc": "Information for sufferers and carers of people with Panic, Anxiety, Phobias and OCD, including Message Forum and Chat room.",
-      "link": "www.nomorepanic.co.uk"
+      "link": "https://www.nomorepanic.co.uk/"
     },
     {
       "category": "PsychHelp",
@@ -38,7 +38,7 @@
       "name": "No Panic",
       "phone": "0844 967 4848 (10am to 10pm every day)",
       "desc": "Information, advice & telephone mentoring for people (and carers) with Panic, Anxiety, Phobias, OCD and the effects of tranquiliser withdrawal. Plusaudio and phone (01952 680835) recording of the Breathing Technique.",
-      "link": "www.nopanic.org.uk"
+      "link": "https://nopanic.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -46,7 +46,7 @@
       "name": "OCD-UK",
       "phone": "03332 127890",
       "desc": "Information and advice for people affected by OCD (and their family/friends), including advice line, blogs, publications, advice on seeking therapy and support group information.",
-      "link": "www.ocduk.org"
+      "link": "https://www.ocduk.org/"
     },
     {
       "category": "PsychHelp",
@@ -54,7 +54,7 @@
       "name": "OCD Action",
       "phone": "0845 390 6232",
       "desc": "Support, information and advocacy to anyone affected by OCD, including local and online support groups.",
-      "link": "www.ocdaction.org.uk/"
+      "link": "https://www.ocdaction.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -62,7 +62,7 @@
       "name": "Social Anxiety UK",
       "phone": "",
       "desc": "Volunteer led forum and chat rooms for those with social anxiety.",
-      "link": "www.social-anxiety.org.uk/"
+      "link": "http://www.social-anxiety.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -969,5 +969,11 @@
       "link": "www.thewellcentre.org/"
     }
   ],
-  "columns": ["Support For", "Name", "Number", "Description", "Link"]
+  "columns": [
+    "Support For",
+    "Name",
+    "Number",
+    "Description",
+    "Link"
+  ]
 }
