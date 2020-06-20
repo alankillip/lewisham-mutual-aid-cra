@@ -54,7 +54,7 @@ const Search = () => {
       <div className="search-box">
         <div>search resources :</div>
         <input type="text" onChange={onChange}/></div>
-      <div className="results-tally">{searchResults.length} Result{searchResults.length !== 1 ? 's': ''} :</div>
+      {searchResults.length !== 0 && <div className="results-tally">{searchResults.length} Result{searchResults.length !== 1 ? 's': ''} :</div>}
       <div>
         <CommGroupComponent titles={resources.commGroups.columns} commGroups={commGroupResults}/>
         <LinkComponent links={linkResults}/>

@@ -13,14 +13,15 @@ const TextWithSearchHilite = (props: Props) => {
   const regEx = new RegExp(searchTerm, 'gi');
   const matches = text.match(regEx);
   let location = useLocation();
-  if (searchTerm !== '' && matches !== null && location.pathname === RESOURCE_MENU_PATH) {
+  if (searchTerm !== '' && matches !== null && (location.pathname === RESOURCE_MENU_PATH || location.pathname === '/')) {
     const textArray = text.split(matches[0]);
     return (<span key={text}>{textArray.map(
       (s: string, index: number) => {
+        const key = `${s}-${index}`
         if (index < textArray.length - 1) {
-          return <span key={s}><span>{s}</span><span className="hilite">{matches[0]}</span></span>
+          return <span key={key}><span>{s}</span><span className="hilite">{matches[0]}</span></span>
         }
-        return <span key={s}>{s}</span>
+        return <span key={key}>{s}</span>
       }
     )}</span>);
   }
