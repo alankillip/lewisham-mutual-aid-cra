@@ -31,8 +31,9 @@ export const getFeatures = (titles: string[], content: Content) => {
 };
 
 export const checkProtocolPrefix = (url: string) => {
-  const regex: RegExp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#()?&//=]*)/, 'g');
+  const regex: RegExp = new RegExp(/^(?:(ht|f)tp(s?)\:\/\/)?/, 'g');
   const result = regex.test(url);
+  console.log(result, url);
   if (!result) {
     return `//${url}`;
   }
