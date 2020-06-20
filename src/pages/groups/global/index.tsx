@@ -4,7 +4,7 @@ const Global = () => (
   <div>
     <iframe
       width="100%"
-      height="800"
+      height="1000"
       title="mutual-aid-wiki"
       src="https://mutualaid.wiki"
     />
