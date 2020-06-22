@@ -147,14 +147,6 @@
     {
       "category": "PsychHelp",
       "type": "Counselling/Therapy Services",
-      "name": "Centre 70 Counselling (London, SE27)",
-      "phone": "020 8670 2775",
-      "desc": "Low cost counselling service dealing with a range of problems with online self-referral. Fees on a sliding scale, with some free places.",
-      "link": "Y"
-    },
-    {
-      "category": "PsychHelp",
-      "type": "Counselling/Therapy Services",
       "name": "Guild of Psychotherapists Psychotherapy Clinic (London, SE1)",
       "phone": "0207 401 3260",
       "desc": "Low cost psychoanalytic psychotherapy service for people on income of less that £18,000, via self referral to reduced fee clinic.",
@@ -771,14 +763,6 @@
     {
       "category": "PsychHelp",
       "type": "Self-Harm",
-      "name": "Lifesigns",
-      "phone": "",
-      "desc": "User led organisation providing information, alternative coping ideas, online support and forum for people affected by self-injury including family and friends.",
-      "link": "Y"
-    },
-    {
-      "category": "PsychHelp",
-      "type": "Self-Harm",
       "name": "National Self Harm Network",
       "phone": "",
       "desc": "24 hour online forum for people who self-injure, as well as their family and friends.",
@@ -795,26 +779,10 @@
     {
       "category": "PsychHelp",
       "type": "Self-Harm",
-      "name": "Scar Tissue",
-      "phone": "",
-      "desc": "Fact sheet, resources and online forums for people who self-harm.",
-      "link": "Y"
-    },
-    {
-      "category": "PsychHelp",
-      "type": "Self-Harm",
       "name": "Self Injury Support",
       "phone": "",
       "desc": "List of national support groups, information and self-help ideas plus Women’s Self Injury Helpline 0808 800 8088 (not 24 hr) and text and email support 07537 432444 (not 24 hr)",
       "link": "www.selfinjurysupport.org.uk"
-    },
-    {
-      "category": "PsychHelp",
-      "type": "Sexual Abuse / Sexual Assault",
-      "name": "Dabs Pathfinder Service",
-      "phone": "07854 653118 - 24 hour Helpline ",
-      "desc": "A signposting service that provides free support, information and in house counselling to anyone regarding issues to do with childhood abuse, incest and sexual violence.",
-      "link": "Y"
     },
     {
       "category": "PsychHelp",
@@ -863,14 +831,6 @@
       "phone": "020 3598 3898",
       "desc": "1:1 web or SMS or WhatsApp chat and counselling for men who have been raped or sexually abused. Support for those who have (or are considering) reporting to the police for emotional support, health, legal process and safety advice.",
       "link": "www.survivorsuk.org/"
-    },
-    {
-      "category": "PsychHelp",
-      "type": "Socialising",
-      "name": "Connect& Do",
-      "phone": "",
-      "desc": "Social networking site to help build friends around shared interests in your local area.",
-      "link": "Y"
     },
     {
       "category": "PsychHelp",
