@@ -78,7 +78,7 @@
       "name": "Child Death Helpline",
       "phone": "0800 282986 / 0808 8006019",
       "desc": "Helpline for anyone affected by the death of a child of any age. Advice, information, listening, befriending, referrals and face to face service by arrangement.",
-      "link": "www.childdeathhelpline.org.uk "
+      "link": "http://childdeathhelpline.org.uk/ "
     },
     {
       "category": "PsychHelp",
@@ -110,7 +110,7 @@
       "name": "Bipolar UK",
       "phone": "0333 323 3880",
       "desc": "Information, on-line community, Peer Support line and a network of self help groups for people affected by bipolar disorder.",
-      "link": "www.bipolaruk.org.uk/"
+      "link": "https://www.bipolaruk.org/"
     },
     {
       "category": "PsychHelp",
@@ -150,7 +150,7 @@
       "name": "Centre 70 Counselling (London, SE27)",
       "phone": "020 8670 2775",
       "desc": "Low cost counselling service dealing with a range of problems with online self-referral. Fees on a sliding scale, with some free places.",
-      "link": "www.counselling-centre70.org.uk/"
+      "link": "Y"
     },
     {
       "category": "PsychHelp",
@@ -174,7 +174,7 @@
       "name": "Multi Ethnic Service, Waterloo Community Counselling (London, SE1)",
       "phone": "020 7928 3462",
       "desc": "Free service for those that require counselling in other languages, and to refugees and asylum seekers living in any South London borough. Self-referral via Lambeth IAPT calling 020 3228 6747.",
-      "link": "www.waterloocc.co.uk/MultiEthnicCounselling.aspx"
+      "link": "https://www.waterloocc.co.uk/multi-ethnic-counselling-service/"
     },
     {
       "category": "PsychHelp",
@@ -182,7 +182,7 @@
       "name": "Waterloo Community Counselling (London, SE1)",
       "phone": "020 7928 3462",
       "desc": "Low cost counselling service for a range of problems via self-referral. Fees on a sliding scale.",
-      "link": "www.waterloocc.co.uk/Home.aspx"
+      "link": "https://www.waterloocc.co.uk/"
     },
     {
       "category": "PsychHelp",
@@ -238,7 +238,7 @@
       "name": "Asha Project",
       "phone": "020 8696 0023",
       "desc": "Information, advice and refuge for South Asian women (age 18+) and their children experiencing domestic violence.",
-      "link": "www.ashaprojects.org.uk/"
+      "link": "http://www.ashaprojects.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -246,7 +246,7 @@
       "name": "Domestic Violence Helpline",
       "phone": "0808 2000 247",
       "desc": "24 hour national domestic violence helpline, plus information and resources, run by Refuge and Women’s Aid for women experiencing domestic violence, their family, friends, colleagues and others calling on their behalf.",
-      "link": "www.nationaldomesticviolencehelpline.org.uk/"
+      "link": "https://www.nationaldahelpline.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -254,7 +254,7 @@
       "name": "Domestic Violence Intervention Project (DVIP)",
       "phone": "020 7633 9181",
       "desc": "For male perpetrators, their female partners and children. A range of services including violence prevention group programme with fees on a sliding scale or free via Social Services.",
-      "link": "www.nationaldomesticviolencehelpline.org.uk/"
+      "link": "https://dvip.org/"
     },
     {
       "category": "PsychHelp",
@@ -262,7 +262,7 @@
       "name": "Everyman Project",
       "phone": "020 7263 8884",
       "desc": "Arange of support services for men who want to stop behaving violently or abusively, and for the people affected by their violence or abuse. These include a focused brief counselling programme, a partner support programme, providing information and advice on the telephone.",
-      "link": "www.everymanproject.co.uk/"
+      "link": "http://www.everymanproject.co.uk/"
     },
     {
       "category": "PsychHelp",
@@ -302,7 +302,7 @@
       "name": "Respect Helpline",
       "phone": "0808 802 4040",
       "desc": "Helpline for anyone concerned about their own or someone else’s behaviour towards their partner (male, female, in heterosexual or same-sex relationships).",
-      "link": "www.respectphoneline.org.uk/"
+      "link": "https://respectphoneline.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -726,7 +726,7 @@
       "name": "National Childbirth Trust (NCT)",
       "phone": "0300 330 0700",
       "desc": "Information and support in pregnancy, childbirth and early parenthood, plus support services in local area.",
-      "link": " www.nct.org.uk"
+      "link": "https://www.nct.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -758,7 +758,7 @@
       "name": "Free Mindfulness Project",
       "phone": "",
       "desc": "Free guided mindfulness meditations to download and information about apps.",
-      "link": "www.freemindfulness.org/home"
+      "link": "http://www.freemindfulness.org/home"
     },
     {
       "category": "PsychHelp",
@@ -774,7 +774,7 @@
       "name": "Lifesigns",
       "phone": "",
       "desc": "User led organisation providing information, alternative coping ideas, online support and forum for people affected by self-injury including family and friends.",
-      "link": "www.lifesigns.org.uk"
+      "link": "Y"
     },
     {
       "category": "PsychHelp",
@@ -798,7 +798,7 @@
       "name": "Scar Tissue",
       "phone": "",
       "desc": "Fact sheet, resources and online forums for people who self-harm.",
-      "link": "www.scar-tissue.net"
+      "link": "Y"
     },
     {
       "category": "PsychHelp",
@@ -814,7 +814,7 @@
       "name": "Dabs Pathfinder Service",
       "phone": "07854 653118 - 24 hour Helpline ",
       "desc": "A signposting service that provides free support, information and in house counselling to anyone regarding issues to do with childhood abuse, incest and sexual violence.",
-      "link": "www.dabs.uk.com/pathfinder"
+      "link": "Y"
     },
     {
       "category": "PsychHelp",
@@ -854,7 +854,7 @@
       "name": "Rape Crisis South London",
       "phone": "0808 802 9999 National Freephone helpline ",
       "desc": "Comprehensive service for female survivors of sexual violence living anywhere in South London including 1:1 counselling (0208 683 3311) and group therapy (contribution as able).",
-      "link": "www.rasasc.org.uk/"
+      "link": "http://www.rasasc.org.uk/"
     },
     {
       "category": "PsychHelp",
@@ -870,7 +870,7 @@
       "name": "Connect& Do",
       "phone": "",
       "desc": "Social networking site to help build friends around shared interests in your local area.",
-      "link": "www.connectanddo.org"
+      "link": "Y"
     },
     {
       "category": "PsychHelp",
