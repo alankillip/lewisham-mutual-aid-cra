@@ -1,42 +1,6 @@
 [
   {
     "category": "Links",
-    "name": "Sydenham Handbook Template for volunteers (edited for Lewisham)",
-    "link": "https://docs.google.com/document/d/1aIf28vipA6BwMY3pDqHbYg6LFgF7rAuWhYqKdFPtyyM/edit?usp=sharing",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "Flyer Template #1",
-    "link": "https://docs.google.com/document/d/1gaDWPGoxIAWot9RWLvg1HOuOQlov6gVzsJ7wSyI5bDw/edit?usp=sharing",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "How to run a big Zoom meeting",
-    "link": "https://docs.google.com/document/d/e/2PACX-1vTIXqAZR9k5admgKyJbA-tYh0Z5Fka9std73x3FbxH9JKC5TQE3XVR0HimAW8_ZE5NURBOPs6QT-_gn/pub?fbclid=IwAR3Pr0wszpykNH7pEewzFajlnRJrcn5B2UeVxTaJUtXbnQ-Yd6VXnt2oNG0",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "List of UK-wide mutual aid groups",
-    "link": "https://freedomnews.org.uk/covid-19-uk-mutual-aid-groups-a-list/",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "List and map of UK-wide mutual aid groups",
-    "link": "https://covidmutualaid.org/local-groups/",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "Our Facebook group",
-    "link": "https://www.facebook.com/groups/906156979855211/",
-    "type": "general"
-  },
-  {
-    "category": "Links",
     "name": "QueerCare guidance on COVID19",
     "link": "https://queercare.network/our-work/resources/covid-19/",
     "type": "general"
@@ -45,18 +9,6 @@
     "category": "Links",
     "name": "Royal Mail stance on COVID19",
     "link": "https://www.royalmail.com/coronavirus?fbclid=IwAR3NO1sC5MRL_j6H8THbyIAptTzorkHl6cYPDlmMi6FmG-faI9cozQfmFdo",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "Leafleting protocol",
-    "link": "https://docs.google.com/document/d/1tWWky3DI_4o01idxJqcP_GIUt4UxfTfrU02w67p41Hw/edit?usp=sharing",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "How to run online meetings, classes, and events",
-    "link": "https://docs.google.com/document/d/1NyrEU7n6IUl5rgGiflx_dK8CrdoB2bwyyl9XG-H7iw8/preview?fbclid=IwAR21PQh0YN6vqE9mdkadUOqszpSfJqmZw9jxU1tuMBVaJ836CkfoD0YG20M",
     "type": "general"
   },
   {
@@ -73,20 +25,8 @@
   },
   {
     "category": "Links",
-    "name": "Please report any police interaction with Lewisham mutual aid volunteers here",
-    "link": "http://lewishamlockdown.wordpress.com/submit/",
-    "type": "general"
-  },
-  {
-    "category": "Links",
     "name": "Hackney resources gallery",
     "link": "https://airtable.com/shrDtrVJmWmRcgkgE/tblQyv9WahSteQAHs?blocks=hide",
-    "type": "general"
-  },
-  {
-    "category": "Links",
-    "name": "Mutual aid WhatsApp group chat tool",
-    "link": "https://docs.google.com/document/u/1/d/1w7tm6z7OEDIMI7-Cqtp-lE6VzoDe5wq0kFyfyaleAis/edit?usp=drive_web&ouid=114161509568220720904",
     "type": "general"
   },
   {
@@ -97,31 +37,97 @@
   },
   {
     "category": "Links",
+    "name": "Mutual Aid Volunteer Tools",
+    "link": "",
+    "type": ""
+  },
+  {
+    "category": "Links",
+    "name": "Sydenham Handbook Template for volunteers (edited for Lewisham)",
+    "link": "https://docs.google.com/document/d/1aIf28vipA6BwMY3pDqHbYg6LFgF7rAuWhYqKdFPtyyM/edit?usp=sharing",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "Flyer Template #1",
+    "link": "https://docs.google.com/document/d/1gaDWPGoxIAWot9RWLvg1HOuOQlov6gVzsJ7wSyI5bDw/edit?usp=sharing",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "How to run a big Zoom meeting",
+    "link": "https://docs.google.com/document/d/e/2PACX-1vTIXqAZR9k5admgKyJbA-tYh0Z5Fka9std73x3FbxH9JKC5TQE3XVR0HimAW8_ZE5NURBOPs6QT-_gn/pub?fbclid=IwAR3Pr0wszpykNH7pEewzFajlnRJrcn5B2UeVxTaJUtXbnQ-Yd6VXnt2oNG0",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "List of UK-wide mutual aid groups",
+    "link": "https://freedomnews.org.uk/covid-19-uk-mutual-aid-groups-a-list/",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "List and map of UK-wide mutual aid groups",
+    "link": "https://covidmutualaid.org/local-groups/",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "Our Facebook group",
+    "link": "https://www.facebook.com/groups/906156979855211/",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "Leafleting protocol",
+    "link": "https://docs.google.com/document/d/1tWWky3DI_4o01idxJqcP_GIUt4UxfTfrU02w67p41Hw/edit?usp=sharing",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "How to run online meetings, classes, and events",
+    "link": "https://docs.google.com/document/d/1NyrEU7n6IUl5rgGiflx_dK8CrdoB2bwyyl9XG-H7iw8/preview?fbclid=IwAR21PQh0YN6vqE9mdkadUOqszpSfJqmZw9jxU1tuMBVaJ836CkfoD0YG20M",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "Please report any police interaction with Lewisham mutual aid volunteers here",
+    "link": "http://lewishamlockdown.wordpress.com/submit/",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
+    "name": "Mutual aid WhatsApp group chat tool",
+    "link": "https://docs.google.com/document/u/1/d/1w7tm6z7OEDIMI7-Cqtp-lE6VzoDe5wq0kFyfyaleAis/edit?usp=drive_web&ouid=114161509568220720904",
+    "type": "tools"
+  },
+  {
+    "category": "Links",
     "name": "Safe delivery guidelines for volunteers",
     "link": "https://files.slack.com/files-pri/T010G764H7W-F010XJBDBGD/deliveries_directions.jpg",
-    "type": "general"
+    "type": "tools"
   },
   {
     "category": "Links",
     "name": "Risk assessment for leafletting and delivery",
     "link": "https://docs.google.com/spreadsheets/d/1xSGQrkyehXHHtSMR4_x-Dt8egGuw0EIXEMtRiQWllyI/edit?usp=sharing",
-    "type": "general"
+    "type": "tools"
   },
   {
     "category": "Links",
     "name": "Lewisham wellbeing map",
     "link": "https://www.google.com/maps/d/u/0/viewer?mid=13jU2zsGolUtY5-dAhCk2Y44Np3U&ll=51.45044221345211%2C-0.006353766277015893&z=13",
-    "type": "general"
+    "type": "tools"
   },
   {
     "category": "Links",
     "name": "Prescription pick-up protocol",
     "link": "https://drive.google.com/file/d/1DE2fR_jbhSpS_-2n_79AnNhUXosw4ajV/view?usp=sharing",
-    "type": "general"
+    "type": "tools"
   },
   {
     "category": "Links",
-    "name": "Charity links:",
+    "name": "Charity Links:",
     "link": "",
     "type": ""
   },
