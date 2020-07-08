@@ -6,11 +6,11 @@ import {SupportLocalBus, SupportLocalBusKeys} from './SupportLocalBus';
 import {WorkersRight, WorkersRightKeys} from './WorkersRight';
 
 export type CategoryType =
+| 'All'
 | 'CommGroups'
 | 'Links'
 | 'Meetings'
 | 'PsychHelp'
-| 'category'
 | 'SupportLocalBusiness'
 | 'WorkersRights';
 

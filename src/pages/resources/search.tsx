@@ -20,49 +20,91 @@ import {searchTermAction} from '../../actions';
 import './resource-page.css'
 import './search.css'
 
+interface ResultsDictionary {
+  All: Content[],
+  CommGroups: CommGroup[],
+  Links: Link[],
+  Meetings: Meeting[],
+  PsychHelp: Psych[],
+  SupportLocalBusiness: SupportLocalBus[],
+  WorkersRights: WorkersRight[],
+};
+
 const allResourcesSelector = (state: State): Content[] => {
   const {resources} = state;
   const {commGroups, links, meetings, psychHelp, supportLocalBusiness, workersRights} = resources;
   return [...commGroups.groups, ...links, ...meetings.groups, ...psychHelp.groups, ...supportLocalBusiness.groups, ...workersRights.groups];
 };
 
+const getResultsDictionary = (results: Content[]): ResultsDictionary  => {
+  const filterResults = (category: CategoryType) => results.filter((content: Content) => content.category === category);
+  return {
+    All: results,
+    CommGroups: filterResults('CommGroups') as CommGroup[],
+    Links: filterResults('Links') as Link[],
+    Meetings: filterResults('Meetings') as Meeting[],
+    PsychHelp: filterResults('PsychHelp') as Psych[],
+    SupportLocalBusiness: filterResults('SupportLocalBusiness') as SupportLocalBus[],
+    WorkersRights: filterResults('WorkersRights') as WorkersRight[],
+  };
+};
+
+const typeReducer = () => {
+
+}
+
 const Search = () => {
-  const [searchResults, setSearchResults] = useState<Content[]>([]);
+
+  const [currentCategory, setCurrentCategory] = useState<CategoryType>('All');
+  const [currentSearchTerm, setCurrentSearchTerm] = useState<string>('');
   const allResources = useSelector(allResourcesSelector);
+  const [searchResults, setSearchResults] = useState<ResultsDictionary>(getResultsDictionary(allResources));
   const resources = useSelector((state: State) => state.resources);
   const dispatch = useDispatch();
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const searchTerm: string = e.currentTarget.value;
+    setCurrentSearchTerm(e.currentTarget.value);
     let results: Content[]  = [];
-    if (searchTerm.length > 2) {
-      dispatch(searchTermAction(searchTerm));
-      results = searchResources(searchTerm, allResources, false);
+    if (currentSearchTerm.length > 2) {
+      dispatch(searchTermAction(currentSearchTerm));
+      results = searchResources(currentSearchTerm, allResources, false);
     }
-    setSearchResults(results);
+    setSearchResults(getResultsDictionary(results));
   };
 
-  const filterResults = (category: CategoryType) => searchResults.filter((content: Content) => content.category === category);
-  const commGroupResults = filterResults('CommGroups') as CommGroup[];
-  const linkResults = filterResults('Links') as Link[];
-  const meetingsResults = filterResults('Meetings') as Meeting[];
-  const psychResults = filterResults('PsychHelp') as Psych[];
-  const supportLocalBusinessesResults = filterResults('SupportLocalBusiness') as SupportLocalBus[];
-  const workersRightsResults = filterResults('WorkersRights') as WorkersRight[];
+  const onCategoryChange = (e: React.FormEvent<HTMLSelectElement>) => {
+    setCurrentCategory(e.currentTarget.value as CategoryType);
+  };
+
+  const shouldShowResultComponent = (category: CategoryType) => {
+    return currentCategory === 'All' || currentCategory === category;
+  };
+
   return (
     <div className="resource-page">
       <div className="search-box">
-        <div>search resources :</div>
-        <input type="text" onChange={onChange}/></div>
-      {searchResults.length !== 0 && <div className="results-tally">{searchResults.length} Result{searchResults.length !== 1 ? 's': ''} :</div>}
+        <div>select category :</div>
+        {<select onChange={onCategoryChange}>
+          <option value="All">ALL</option>
+          <option value="CommGroups">Community Groups</option>
+          <option value="Links">Links</option>
+          <option value="Meetings">Meetings</option>
+          <option value="PsychHelp">Psychological Help</option>
+          <option value="SupportLocalBusiness">Support Local Businesses</option>
+          <option value="WorkersRights">Worker's Rights</option>
+        </select>}
+        <div>search :</div>
+        <input type="text" onChange={onChange}/>
+      </div>
+      {searchResults.All.length !== 0 && <div className="results-tally">{(searchResults[currentCategory] as Content[]).length} Result{searchResults.All.length !== 1 ? 's': ''} :</div>}
       <div>
-        <CommGroupComponent titles={resources.commGroups.columns} commGroups={commGroupResults}/>
-        <LinkComponent links={linkResults}/>
-        <Meetings titles={resources.meetings.columns} meetings={meetingsResults}/>
-        <PsychHelp titles={resources.psychHelp.columns} psychs={psychResults}/>
-        <SupportLocalBusinessesComponent titles={resources.supportLocalBusiness.columns}
-                                         supportLocalBus={supportLocalBusinessesResults}/>
-        <WorkersRightsComponent titles={resources.workersRights.columns} workersRights={workersRightsResults}/>
+        {shouldShowResultComponent('CommGroups') && <CommGroupComponent titles={resources.commGroups.columns} commGroups={searchResults.CommGroups}/>}
+        {shouldShowResultComponent('Links') && <LinkComponent links={searchResults.Links}/>}
+        {shouldShowResultComponent('Meetings') && <Meetings titles={resources.meetings.columns} meetings={searchResults.Meetings}/>}
+        {shouldShowResultComponent('PsychHelp') && <PsychHelp titles={resources.psychHelp.columns} psychs={searchResults.PsychHelp}/>}
+        {shouldShowResultComponent('SupportLocalBusiness') && <SupportLocalBusinessesComponent titles={resources.supportLocalBusiness.columns}
+                                         supportLocalBus={searchResults.SupportLocalBusiness}/>}
+        {shouldShowResultComponent('WorkersRights') && <WorkersRightsComponent titles={resources.workersRights.columns} workersRights={searchResults.WorkersRights}/>}
       </div>
     </div>
   )
