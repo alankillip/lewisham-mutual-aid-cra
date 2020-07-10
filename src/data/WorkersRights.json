@@ -13,7 +13,7 @@
       "category": "WorkersRights",
       "name": "Shelter",
       "topic": "Housing",
-      "type": "Charity ",
+      "type": "Charity",
       "website": "https://england.shelter.org.uk/housing_advice/coronavirus",
       "detailsNotes": "Topics include: Rent, benefits and money problems; Eviction and being asked to leave ; Help if you're homeless; Domestic abuse; Ending a tenancy and moving home; Repairs and access to your home; Mortgage payment problems",
       "targetGroup": ""
@@ -31,7 +31,7 @@
       "category": "WorkersRights",
       "name": "Citizens Advice ",
       "topic": "",
-      "type": "",
+      "type": "Charity",
       "website": "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/",
       "detailsNotes": "",
       "targetGroup": ""

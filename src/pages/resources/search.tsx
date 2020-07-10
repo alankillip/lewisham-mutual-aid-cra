@@ -36,10 +36,13 @@ const allResourcesSelector = (state: State): Content[] => {
   return [...commGroups.groups, ...links, ...meetings.groups, ...psychHelp.groups, ...supportLocalBusiness.groups, ...workersRights.groups];
 };
 
-interface Type {value: string, label: string}
+interface Type {
+  value: string,
+  label: string
+}
 
 const getTypes = (content: Content[]) => {
-  const typeTitleMap: {[key: string]: string} = {
+  const typeTitleMap: { [key: string]: string } = {
     general: 'General Advice and Guidance',
     tools: 'Mutual Aid Volunteer Tools',
     charity: 'Charity Links:',
@@ -47,7 +50,7 @@ const getTypes = (content: Content[]) => {
 
   const getTitle = (key: string) => typeTitleMap[key] || key;
 
-  const typeReducer = (result: {[key: string]: boolean}, content: Content) => {
+  const typeReducer = (result: { [key: string]: boolean }, content: Content) => {
     if (content.type) {
       return ({...result, [content.type as string]: true});
     }
@@ -63,7 +66,7 @@ const getTypes = (content: Content[]) => {
   return getTypeObjects(content);
 };
 
-const getResultsDictionary = (results: Content[]): ResultsDictionary  => {
+const getResultsDictionary = (results: Content[]): ResultsDictionary => {
   const filterResults = (category: CategoryType) => results.filter((content: Content) => content.category === category);
   return {
     All: results,
@@ -88,7 +91,7 @@ const Search = () => {
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
     setCurrentSearchTerm(e.currentTarget.value);
-    let results: Content[]  = allResources;
+    let results: Content[] = allResources;
     if (currentSearchTerm.length > 2) {
       dispatch(searchTermAction(currentSearchTerm));
       results = searchResources(currentSearchTerm, allResources, false);
@@ -124,35 +127,42 @@ const Search = () => {
   const currentCategoryResults = (searchResults[currentCategory] as Content[]).filter(typeFilter);
   return (
     <div className="resource-page">
+
+      <div>select category :</div>
+      {<select onChange={onCategoryChange}>
+        <option value="All">ALL</option>
+        <option value="CommGroups">Community Groups</option>
+        <option value="Links">Links</option>
+        <option value="Meetings">Meetings</option>
+        <option value="PsychHelp">Psychological Help</option>
+        <option value="SupportLocalBusiness">Support Local Businesses</option>
+        <option value="WorkersRights">Worker's Rights</option>
+      </select>}
+      {types.length > 0 &&
+      <select onChange={onTypeChange}>
+        <option value="">ALL</option>
+        {types.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
+      </select>
+      }
       <div className="search-box">
-        <div>select category :</div>
-        {<select onChange={onCategoryChange}>
-          <option value="All">ALL</option>
-          <option value="CommGroups">Community Groups</option>
-          <option value="Links">Links</option>
-          <option value="Meetings">Meetings</option>
-          <option value="PsychHelp">Psychological Help</option>
-          <option value="SupportLocalBusiness">Support Local Businesses</option>
-          <option value="WorkersRights">Worker's Rights</option>
-        </select>}
-        {types.length > 0 &&
-        <select onChange={onTypeChange}>
-          <option value="">ALL</option>
-          {types.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
-        </select>
-        }
         <div>search :</div>
         <input type="text" onChange={onChange}/>
       </div>
-      {allResults.length !== 0 && <div className="results-tally">{currentCategoryResults.length} Result{allResults.length !== 1 ? 's': ''} :</div>}
+      {allResults.length !== 0 &&
+      <div className="results-tally">{currentCategoryResults.length} Result{allResults.length !== 1 ? 's' : ''} :</div>}
       <div>
-        {shouldShowResultComponent('CommGroups') && <CommGroupComponent titles={resources.commGroups.columns} commGroups={searchResults.CommGroups.filter(typeFilter)}/>}
+        {shouldShowResultComponent('CommGroups') && <CommGroupComponent titles={resources.commGroups.columns}
+                                                                        commGroups={searchResults.CommGroups.filter(typeFilter)}/>}
         {shouldShowResultComponent('Links') && <LinkComponent links={searchResults.Links.filter(typeFilter)}/>}
-        {shouldShowResultComponent('Meetings') && <Meetings titles={resources.meetings.columns} meetings={searchResults.Meetings.filter(typeFilter)}/>}
-        {shouldShowResultComponent('PsychHelp') && <PsychHelp titles={resources.psychHelp.columns} psychs={searchResults.PsychHelp.filter(typeFilter)}/>}
-        {shouldShowResultComponent('SupportLocalBusiness') && <SupportLocalBusinessesComponent titles={resources.supportLocalBusiness.columns}
+        {shouldShowResultComponent('Meetings') &&
+        <Meetings titles={resources.meetings.columns} meetings={searchResults.Meetings.filter(typeFilter)}/>}
+        {shouldShowResultComponent('PsychHelp') &&
+        <PsychHelp titles={resources.psychHelp.columns} psychs={searchResults.PsychHelp.filter(typeFilter)}/>}
+        {shouldShowResultComponent('SupportLocalBusiness') &&
+        <SupportLocalBusinessesComponent titles={resources.supportLocalBusiness.columns}
                                          supportLocalBus={searchResults.SupportLocalBusiness.filter(typeFilter)}/>}
-        {shouldShowResultComponent('WorkersRights') && <WorkersRightsComponent titles={resources.workersRights.columns} workersRights={searchResults.WorkersRights.filter(typeFilter)}/>}
+        {shouldShowResultComponent('WorkersRights') && <WorkersRightsComponent titles={resources.workersRights.columns}
+                                                                               workersRights={searchResults.WorkersRights.filter(typeFilter)}/>}
       </div>
     </div>
   )
