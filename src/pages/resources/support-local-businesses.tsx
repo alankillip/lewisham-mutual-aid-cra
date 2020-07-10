@@ -9,7 +9,7 @@ const CommGroups = () => {
   const {groups, columns} = supportLocalBus;
   return (
     <div className="resource-page">
-      <div className="title">Local Organisation Requiring Help</div>
+      <div className="resource-page-title">Local Organisation Requiring Help</div>
       <SupportLocalBusinessesComponent supportLocalBus={groups} titles={columns} />
     </div>
   )};

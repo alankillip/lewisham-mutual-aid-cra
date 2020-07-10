@@ -138,7 +138,7 @@ const Search = () => {
         {types.length > 0 &&
         <select onChange={onTypeChange}>
           <option value="">ALL</option>
-          {types.map((item) => <option value={item.value}>{item.label}</option>)}
+          {types.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
         </select>
         }
         <div>search :</div>

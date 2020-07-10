@@ -1,12 +1,9 @@
 .top-bar {
-  box-shadow: 2px 6px 5px -1px rgba(0,0,0,0.13);
   display: flex;
   flex-direction: row;
   height: 50px;
   justify-content: space-between;
   padding-right: 10px;
-  background: #d6f1f4;
-  color: #318492;
 }
 
 .menu {
@@ -51,7 +48,7 @@
   -ms-user-select: none;
   user-select: none;
   text-align: right;
-  background: #d6f1f4
+  background: #27a4de
 }
 
 .menu-item-selected {
@@ -76,5 +73,5 @@
   flex-direction: row;
   align-items: center;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 40px;
 }

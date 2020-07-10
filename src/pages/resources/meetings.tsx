@@ -10,7 +10,7 @@ const Meetings = () => {
   const {groups, columns} = commGroups;
   return (
     <div className="resource-page">
-      <div className="title">Meetings, past and present.</div>
+      <div className="resource-page-title">Meetings, past and present.</div>
       <MeetingsComponent meetings={groups} titles={columns} />
     </div>
   )};

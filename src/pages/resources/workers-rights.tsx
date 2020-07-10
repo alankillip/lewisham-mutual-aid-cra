@@ -10,7 +10,7 @@ const CommGroups = () => {
   const {groups, columns} = workersRights;
   return (
     <div className="resource-page">
-      <div className="title">Organisations providing good advice/assistance to people on accessing their rights and/or key services. For instance around housing, work etc... </div>
+      <div className="resource-page-title">Organisations providing good advice/assistance to people on accessing their rights and/or key services. For instance around housing, work etc... </div>
       <WorkersRightComponent workersRights={groups} titles={columns} />
     </div>
   )};

@@ -10,7 +10,7 @@ const CommGroups = () => {
   const {groups, columns} = commGroups;
   return (
   <div className="resource-page">
-    <div className="title">Community Groups in Lewisham</div>
+    <div className="resource-page-title">Community Groups in Lewisham</div>
       <CommGroupComponent commGroups={groups} titles={columns} />
   </div>
 )};
