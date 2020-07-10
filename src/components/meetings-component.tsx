@@ -7,13 +7,13 @@ const MeetingsComponent = (props: MeetingsProps) => {
   const {meetings, titles} = props;
   return (
     <div>
-      {meetings.map(
-        (commGroup: Meeting, index: number) => (
+      {meetings.reverse().map(
+        (meeting: Meeting, index: number) => (
           <div key={index} className="content-card">
             <div className="content-card-title">
-              <strong>{commGroup.date}</strong>
+              <strong>{meeting.date}</strong>
             </div>
-            {getFeatures(titles, commGroup)}
+            {getFeatures(titles, meeting)}
           </div>
       ))}
     </div>)
