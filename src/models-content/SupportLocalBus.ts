@@ -11,4 +11,5 @@ export interface SupportLocalBus {
   howYouCanHelp: string;
   links: string;
   category: string;
+  type?: string;
 }

@@ -16,4 +16,5 @@ export interface Meeting {
   chair: string;
   summary: string;
   category: string;
+  type?: string;
 }

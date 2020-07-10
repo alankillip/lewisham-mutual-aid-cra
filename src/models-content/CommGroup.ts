@@ -22,4 +22,5 @@ export interface CommGroup {
      link: string;
      otherInfo: string;
      category: string;
+     type?: string;
 }

@@ -10,7 +10,7 @@ export type WorkersRightKeys =
 export interface WorkersRight {
      name: string;
      topic: string;
-     type: string;
+     type?: string;
      website: string;
      detailsNotes: string;
      targetGroup: string;

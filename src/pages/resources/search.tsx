@@ -36,6 +36,33 @@ const allResourcesSelector = (state: State): Content[] => {
   return [...commGroups.groups, ...links, ...meetings.groups, ...psychHelp.groups, ...supportLocalBusiness.groups, ...workersRights.groups];
 };
 
+interface Type {value: string, label: string}
+
+const getTypes = (content: Content[]) => {
+  const typeTitleMap: {[key: string]: string} = {
+    general: 'General Advice and Guidance',
+    tools: 'Mutual Aid Volunteer Tools',
+    charity: 'Charity Links:',
+  };
+
+  const getTitle = (key: string) => typeTitleMap[key] || key;
+
+  const typeReducer = (result: {[key: string]: boolean}, content: Content) => {
+    if (content.type) {
+      return ({...result, [content.type as string]: true});
+    }
+    return result;
+  };
+
+  const getTypes = (content: Content[]) => Object.keys(content.reduce(typeReducer, {}));
+
+  const getTypeObject = (type: string) => ({value: type, label: getTitle(type)});
+
+  const getTypeObjects = (content: Content[]) => getTypes(content).map(getTypeObject);
+
+  return getTypeObjects(content);
+};
+
 const getResultsDictionary = (results: Content[]): ResultsDictionary  => {
   const filterResults = (category: CategoryType) => results.filter((content: Content) => content.category === category);
   return {
@@ -49,14 +76,11 @@ const getResultsDictionary = (results: Content[]): ResultsDictionary  => {
   };
 };
 
-const typeReducer = () => {
-
-}
-
 const Search = () => {
 
   const [currentCategory, setCurrentCategory] = useState<CategoryType>('All');
   const [currentSearchTerm, setCurrentSearchTerm] = useState<string>('');
+  const [currentType, setCurrentType] = useState<string>('');
   const allResources = useSelector(allResourcesSelector);
   const [searchResults, setSearchResults] = useState<ResultsDictionary>(getResultsDictionary(allResources));
   const resources = useSelector((state: State) => state.resources);
@@ -64,7 +88,7 @@ const Search = () => {
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
     setCurrentSearchTerm(e.currentTarget.value);
-    let results: Content[]  = [];
+    let results: Content[]  = allResources;
     if (currentSearchTerm.length > 2) {
       dispatch(searchTermAction(currentSearchTerm));
       results = searchResources(currentSearchTerm, allResources, false);
@@ -72,7 +96,12 @@ const Search = () => {
     setSearchResults(getResultsDictionary(results));
   };
 
+  const onTypeChange = (e: React.FormEvent<HTMLSelectElement>) => {
+    setCurrentType(e.currentTarget.value);
+  };
+
   const onCategoryChange = (e: React.FormEvent<HTMLSelectElement>) => {
+    setCurrentType('');
     setCurrentCategory(e.currentTarget.value as CategoryType);
   };
 
@@ -80,6 +109,19 @@ const Search = () => {
     return currentCategory === 'All' || currentCategory === category;
   };
 
+  let types: Type[] = [];
+  if (currentCategory !== 'All') {
+    types = getTypes(searchResults[currentCategory])
+  }
+
+  const filterType = (type: string) => (content: Content) => {
+    const result = type === '' || content.type === undefined || content.type === type;
+    return result;
+  };
+  const typeFilter = filterType(currentType);
+
+  const allResults = searchResults.All.filter(typeFilter);
+  const currentCategoryResults = (searchResults[currentCategory] as Content[]).filter(typeFilter);
   return (
     <div className="resource-page">
       <div className="search-box">
@@ -93,18 +135,24 @@ const Search = () => {
           <option value="SupportLocalBusiness">Support Local Businesses</option>
           <option value="WorkersRights">Worker's Rights</option>
         </select>}
+        {types.length > 0 &&
+        <select onChange={onTypeChange}>
+          <option value="">ALL</option>
+          {types.map((item) => <option value={item.value}>{item.label}</option>)}
+        </select>
+        }
         <div>search :</div>
         <input type="text" onChange={onChange}/>
       </div>
-      {searchResults.All.length !== 0 && <div className="results-tally">{(searchResults[currentCategory] as Content[]).length} Result{searchResults.All.length !== 1 ? 's': ''} :</div>}
+      {allResults.length !== 0 && <div className="results-tally">{currentCategoryResults.length} Result{allResults.length !== 1 ? 's': ''} :</div>}
       <div>
-        {shouldShowResultComponent('CommGroups') && <CommGroupComponent titles={resources.commGroups.columns} commGroups={searchResults.CommGroups}/>}
-        {shouldShowResultComponent('Links') && <LinkComponent links={searchResults.Links}/>}
-        {shouldShowResultComponent('Meetings') && <Meetings titles={resources.meetings.columns} meetings={searchResults.Meetings}/>}
-        {shouldShowResultComponent('PsychHelp') && <PsychHelp titles={resources.psychHelp.columns} psychs={searchResults.PsychHelp}/>}
+        {shouldShowResultComponent('CommGroups') && <CommGroupComponent titles={resources.commGroups.columns} commGroups={searchResults.CommGroups.filter(typeFilter)}/>}
+        {shouldShowResultComponent('Links') && <LinkComponent links={searchResults.Links.filter(typeFilter)}/>}
+        {shouldShowResultComponent('Meetings') && <Meetings titles={resources.meetings.columns} meetings={searchResults.Meetings.filter(typeFilter)}/>}
+        {shouldShowResultComponent('PsychHelp') && <PsychHelp titles={resources.psychHelp.columns} psychs={searchResults.PsychHelp.filter(typeFilter)}/>}
         {shouldShowResultComponent('SupportLocalBusiness') && <SupportLocalBusinessesComponent titles={resources.supportLocalBusiness.columns}
-                                         supportLocalBus={searchResults.SupportLocalBusiness}/>}
-        {shouldShowResultComponent('WorkersRights') && <WorkersRightsComponent titles={resources.workersRights.columns} workersRights={searchResults.WorkersRights}/>}
+                                         supportLocalBus={searchResults.SupportLocalBusiness.filter(typeFilter)}/>}
+        {shouldShowResultComponent('WorkersRights') && <WorkersRightsComponent titles={resources.workersRights.columns} workersRights={searchResults.WorkersRights.filter(typeFilter)}/>}
       </div>
     </div>
   )
