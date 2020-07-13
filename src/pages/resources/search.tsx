@@ -100,10 +100,12 @@ const Search = () => {
   };
 
   const onTypeChange = (e: React.FormEvent<HTMLSelectElement>) => {
+    console.log('onTypeChange');
     setCurrentType(e.currentTarget.value);
   };
 
   const onCategoryChange = (e: React.FormEvent<HTMLSelectElement>) => {
+    console.log('onCategoryChange');
     setCurrentType('');
     setCurrentCategory(e.currentTarget.value as CategoryType);
   };
@@ -126,30 +128,39 @@ const Search = () => {
   const allResults = searchResults.All.filter(typeFilter);
   const currentCategoryResults = (searchResults[currentCategory] as Content[]).filter(typeFilter);
   return (
-    <div className="resource-page">
-
-      <div>select category :</div>
-      {<select onChange={onCategoryChange}>
-        <option value="All">ALL</option>
-        <option value="CommGroups">Community Groups</option>
-        <option value="Links">Links</option>
-        <option value="Meetings">Meetings</option>
-        <option value="PsychHelp">Psychological Help</option>
-        <option value="SupportLocalBusiness">Support Local Businesses</option>
-        <option value="WorkersRights">Worker's Rights</option>
-      </select>}
-      {types.length > 0 &&
-      <select onChange={onTypeChange}>
-        <option value="">ALL</option>
-        {types.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
-      </select>
-      }
+    <div>
       <div className="search-box">
-        <div>search :</div>
-        <input type="text" onChange={onChange}/>
-      </div>
-      {allResults.length !== 0 &&
-      <div className="results-tally">{currentCategoryResults.length} Result{allResults.length !== 1 ? 's' : ''} :</div>}
+          <div className="search-box-item">
+            <div>select category :</div>
+            {<select onChange={onCategoryChange}>
+              <option value="All">ALL</option>
+              <option value="CommGroups">Community Groups</option>
+              <option value="Links">Links</option>
+              <option value="Meetings">Meetings</option>
+              <option value="PsychHelp">Psychological Help</option>
+              <option value="SupportLocalBusiness">Support Local Businesses</option>
+              <option value="WorkersRights">Worker's Rights</option>
+            </select>}
+          </div>
+          {types.length > 0 &&
+          <div className="search-box-item">
+            <div>select type :</div>
+
+            <select onChange={onTypeChange}>
+              <option value="">ALL</option>
+              {types.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}
+            </select>
+
+          </div>
+          }
+          <div className="search-box-item">
+            <div>search :</div>
+            <input type="text" onChange={onChange}/>
+          </div>
+        </div>
+        {allResults.length !== 0 &&
+        <div
+          className="results-tally">{currentCategoryResults.length} Result{allResults.length !== 1 ? 's' : ''} :</div>}
       <div>
         {shouldShowResultComponent('CommGroups') && <CommGroupComponent titles={resources.commGroups.columns}
                                                                         commGroups={searchResults.CommGroups.filter(typeFilter)}/>}
@@ -163,7 +174,7 @@ const Search = () => {
                                          supportLocalBus={searchResults.SupportLocalBusiness.filter(typeFilter)}/>}
         {shouldShowResultComponent('WorkersRights') && <WorkersRightsComponent titles={resources.workersRights.columns}
                                                                                workersRights={searchResults.WorkersRights.filter(typeFilter)}/>}
-      </div>
+    </div>
     </div>
   )
 };

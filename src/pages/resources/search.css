@@ -1,20 +1,28 @@
 .search-box {
     display: flex;
+    flex-direction: column;
     justify-content: left;
+    font-size: 20px;
+    width: 550px;
+
+}
+.search-box-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     height: 40px;
     font-size: 20px;
     align-items: center;
-
+}
+select {
+    border: 2px #318492 solid;
+    width: 300px;
 }
 input {
-    height: 30px;
-    margin: 20px;
-    padding: 5px;
     border: 2px #318492 solid;
-    font-size: 20px;
+    width: 293px;
 }
 .results-tally {
-    padding: 10px 0px;
     font-size: 20px;
 }
 
