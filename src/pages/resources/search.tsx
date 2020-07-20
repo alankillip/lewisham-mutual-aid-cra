@@ -89,14 +89,24 @@ const Search = () => {
   const resources = useSelector((state: State) => state.resources);
   const dispatch = useDispatch();
 
-  const onChange = (e: React.FormEvent<HTMLInputElement>) => {
-    setCurrentSearchTerm(e.currentTarget.value);
+  const search = (s: string) => {
+    setCurrentSearchTerm(s);
     let results: Content[] = allResources;
     if (currentSearchTerm.length > 2) {
-      dispatch(searchTermAction(currentSearchTerm));
-      results = searchResources(currentSearchTerm, allResources, false);
+      dispatch(searchTermAction(s));
+      results = searchResources(s, allResources, false);
+    } else {
+      dispatch(searchTermAction(''));
     }
     setSearchResults(getResultsDictionary(results));
+  }
+
+  const clearSearch = () => {
+    search('');
+  };
+
+  const onChange = (e: React.FormEvent<HTMLInputElement>) => {
+    search(e.currentTarget.value);
   };
 
   const onTypeChange = (e: React.FormEvent<HTMLSelectElement>) => {
@@ -155,7 +165,7 @@ const Search = () => {
           }
           <div className="search-box-item">
             <div>search :</div>
-            <input type="text" onChange={onChange}/>
+            <input type="text" onChange={onChange} value={currentSearchTerm}/>
           </div>
         </div>
         {allResults.length !== 0 &&
