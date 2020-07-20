@@ -99,10 +99,6 @@ const Search = () => {
       dispatch(searchTermAction(''));
     }
     setSearchResults(getResultsDictionary(results));
-  }
-
-  const clearSearch = () => {
-    search('');
   };
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {

@@ -3,8 +3,7 @@ import {
 } from './pages';
 
 import {
-  GlobalGroups,
-  LocalGroups
+  GlobalGroups
 } from './pages/groups';
 
 import {
