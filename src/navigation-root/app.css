@@ -4,6 +4,7 @@
   height: 50px;
   justify-content: space-between;
   padding-right: 10px;
+  padding-bottom: 25px;
 }
 
 .menu {
@@ -67,11 +68,12 @@
 }
 
 .site-title {
+  padding-top: 25px;
   padding-left: 25px;
   cursor: default;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
 }

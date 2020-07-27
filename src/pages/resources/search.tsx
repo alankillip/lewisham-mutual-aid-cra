@@ -137,7 +137,7 @@ const Search = () => {
     <div>
       <div className="search-box">
           <div className="search-box-item">
-            <div>select category :</div>
+            <div>Select category :</div>
             {<select onChange={onCategoryChange}>
               <option value="All">ALL</option>
               <option value="CommGroups">Community Groups</option>
@@ -150,7 +150,7 @@ const Search = () => {
           </div>
           {types.length > 0 &&
           <div className="search-box-item">
-            <div>select type :</div>
+            <div>Select type :</div>
 
             <select onChange={onTypeChange}>
               <option value="">ALL</option>
@@ -160,10 +160,11 @@ const Search = () => {
           </div>
           }
           <div className="search-box-item">
-            <div>search :</div>
+            <div>Search :</div>
             <input type="text" onChange={onChange} value={currentSearchTerm}/>
           </div>
         </div>
+      <br></br>
         {allResults.length !== 0 &&
         <div
           className="results-tally">{currentCategoryResults.length} Result{allResults.length !== 1 ? 's' : ''} :</div>}

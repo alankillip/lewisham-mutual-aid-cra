@@ -4,7 +4,7 @@ body {
   color: #fff;
   font-family: sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   min-height: 800px;
   background: url(./images/bg-grid.png), linear-gradient(320deg, #2424bb 0%, #27a4de 100%);
