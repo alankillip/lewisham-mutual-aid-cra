@@ -10,7 +10,7 @@ const PsychHelp = () => {
   const {groups, columns} = psychs;
   return (
     <div className="resource-page">
-      <div className="title">Advice & Support for Psychological Difficulties - compiled by Simon Docking</div>
+      <div className="resource-page-title">Advice & Support for Psychological Difficulties - compiled by Simon Docking</div>
       <PsychHelpComponent psychs={groups} titles={columns} />
     </div>
   )};

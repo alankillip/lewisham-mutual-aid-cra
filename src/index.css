@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 
 body {
-  margin: 0;
-  font-family: Poppins;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.8;
+  min-height: 800px;
+  background: url(./images/bg-grid.png), linear-gradient(320deg, #2424bb 0%, #27a4de 100%);
+  background-repeat: repeat;
+}
+
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #dddddd
 }
 
 code {

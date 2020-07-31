@@ -1,21 +1,3 @@
-.top-bar {
-  box-shadow: 2px 6px 5px -1px rgba(0,0,0,0.13);
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  justify-content: space-between;
-  padding-right: 10px;
-  background: #d6f1f4;
-  color: #318492;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  font-weight: bold;
-  justify-content: flex-end;
-}
-
 .sub-menu {
   display: flex;
   flex-direction: column;
@@ -51,7 +33,7 @@
   -ms-user-select: none;
   user-select: none;
   text-align: right;
-  background: #d6f1f4
+  background: #27a4de
 }
 
 .menu-item-selected {
@@ -69,12 +51,54 @@
   color: #ffffff;
 }
 
-.site-title {
-  padding-left: 25px;
-  cursor: default;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: bold;
-  font-size: 18px;
+@media (min-width:1025px) {
+  .site-title {
+    padding-top: 25px;
+    padding-left: 25px;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    font-size: 60px;
+  }
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 25px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: flex-end;
+  }
+}
+
+@media all and (max-width: 1025px) {
+  .site-title {
+    padding-top: 0px;
+    padding-left: 10px;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: space-between;
+    font-size: 18px;
+  }
 }

@@ -6,6 +6,8 @@ import App from './navigation-root/';
 import * as serviceWorker from './serviceWorker';
 import store from './store';
 
+// console.log('width = ', window.innerWidth);
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

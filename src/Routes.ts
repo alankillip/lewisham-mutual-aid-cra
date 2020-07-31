@@ -3,8 +3,7 @@ import {
 } from './pages';
 
 import {
-  GlobalGroups,
-  LocalGroups
+  GlobalGroups
 } from './pages/groups';
 
 import {
@@ -20,10 +19,12 @@ import {
 
 import {RouteItem} from "./models-app/Route";
 
+/*
 export const groupsMenu = [
   {path: '/find-a-group/search-locally', component: LocalGroups, label: 'SEARCH LOCALLY'},
   {path: '/find-a-group/search-globally', component: GlobalGroups, label: 'SEARCH GLOBALLY'},
 ];
+*/
 
 export const RESOURCE_MENU_PATH = '/resources/search-resources';
 
@@ -40,6 +41,6 @@ export const resourcesMenu = [
 
 export const menu: RouteItem[] = [
   {path: '/', component: Home, label: 'HOME'},
-  {routes: groupsMenu, component: () => null, label: 'FIND A GROUP'},
+  {component: GlobalGroups, path: '/find-a-group', label: 'FIND A GROUP'},
   {label: 'RESOURCES', routes: resourcesMenu, component: () => null},
 ];

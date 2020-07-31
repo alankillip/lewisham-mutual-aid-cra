@@ -15,7 +15,11 @@ export const getFeatures = (titles: string[], content: Content) => {
     }
     const title = titles[index - 1];
     switch (keys[index]) {
+      case 'links':
       case 'link':
+      case 'agenda':
+      case 'minutes':
+      case 'linkToJoin':
         return <ExternalLinkWrapper key={index} title={title} content={content}/>;
       case 'contactFromOrg':
         if (content.indexOf('https://chat.whatsapp.com/') === 0) {

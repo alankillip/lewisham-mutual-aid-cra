@@ -139,7 +139,7 @@
       "category": "Meetings",
       "date": "15.06.20",
       "agenda": "https://docs.google.com/document/d/18sxZ_h-8orMyPjy4yhApxA6rQw37auj_9DT87NjCEKI/edit#",
-      "minutes": "",
+      "minutes": "https://docs.google.com/document/d/18sxZ_h-8orMyPjy4yhApxA6rQw37auj_9DT87NjCEKI/edit",
       "linkToJoin": "https://us02web.zoom.us/j/81448780257",
       "chair": "Simon",
       "summary": ""
@@ -147,18 +147,27 @@
     {
       "category": "Meetings",
       "date": "22.06.20",
-      "agenda": "",
-      "minutes": "",
+      "agenda": "https://docs.google.com/document/d/1J0FQnxltfbPtNwnl0bi9HKtQ2XhBCN74Eynbeox50ac/edit",
+      "minutes": "https://docs.google.com/document/d/1daBdTbfwjuUVX0uVSmrdOvPbAfIrzM-c2iUqQko4aKo/edit#",
       "linkToJoin": "https://us02web.zoom.us/j/86533414778",
-      "chair": "Laura ",
+      "chair": "Amy ",
       "summary": ""
     },
     {
       "category": "Meetings",
       "date": "29.06.20",
+      "agenda": "https://docs.google.com/document/d/1C-Z-PflvRrpb6fxCbRc1Ze8Zfmd_OFaPkn4MSxsxzvo/edit#",
+      "minutes": "https://docs.google.com/document/d/1W3EJsr5poefbfq2CVkx070Lb4oGxUaFcC882LkYCXWY/edit#",
+      "linkToJoin": "https://us02web.zoom.us/j/85347068902",
+      "chair": "AJ",
+      "summary": ""
+    },
+    {
+      "category": "Meetings",
+      "date": "06.07.20",
       "agenda": "",
       "minutes": "",
-      "linkToJoin": "https://us02web.zoom.us/j/85347068902",
+      "linkToJoin": "https://us02web.zoom.us/j/84295929798",
       "chair": "",
       "summary": ""
     }

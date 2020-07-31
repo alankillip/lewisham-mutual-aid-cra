@@ -1,9 +1,26 @@
-.page {
-    padding: 25px;
+
+
+@media (min-width:1025px) {
+    .page {
+        padding: 25px;
+    }
+
+
+    .title {
+        padding-bottom: 15px;
+        font-weight: bold;
+        color: #318492;
+    }
 }
 
-.title {
-    padding-bottom: 15px;
-    font-weight: bold;
-    color: #318492;
+@media all and (max-width: 1025px) {
+    .page {
+        padding: 10px 20px 10px 10px;
+    }
+
+
+    .title {
+        font-weight: bold;
+        color: #318492;
+    }
 }
