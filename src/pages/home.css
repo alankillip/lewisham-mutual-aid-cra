@@ -1,11 +1,26 @@
-.page {
-    border: 5px solid red;
-    padding: 25px;
+
+
+@media (min-width:1025px) {
+    .page {
+        padding: 25px;
+    }
+
+
+    .title {
+        padding-bottom: 15px;
+        font-weight: bold;
+        color: #318492;
+    }
 }
 
+@media all and (max-width: 1025px) {
+    .page {
+        padding-left: 10px;
+    }
 
-.title {
-    padding-bottom: 15px;
-    font-weight: bold;
-    color: #318492;
+
+    .title {
+        font-weight: bold;
+        color: #318492;
+    }
 }
